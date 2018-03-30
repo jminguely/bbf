@@ -1,0 +1,47 @@
+<div class="navigation-wrapper">
+  <header class="navigation-header pt-4 pb-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-6">
+                  <h1>
+                    <img class="site-logo" src="../svg/logo_bbf_white.svg" alt="BBF - Brass Band Fribourg">
+                  </h1>
+              </div>
+              <div class="col-6 text-right">
+                  <a href="#" class="toggle-navigation pr-3">
+                    <svg class="icon icon-right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                    </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div class="navigation text-white">
+    <div class="container py-5">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-4 offset-md-2">
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Agenda</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Présentation</a></li>
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Partenaire</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 offset-md-2">
+          <h3>Suivez-nous</h3>
+          <p>Suivez en direct l'actualité du Brass Band Fribourg au travers des réseaux sociaux.</p>
+          {% include "atoms::badge/badge.twig" %}
+          {% include "atoms::badge/badge.twig" with { badge_icon: 'instagram' } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

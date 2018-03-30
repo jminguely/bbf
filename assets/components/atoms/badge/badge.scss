@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+.badge {
+  border-radius: 50%;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+
+  .icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 0.8em;
+
+    &.icon-facebook {
+      width: 0.5em;
+    }
+  }
+
+  &.badge-outline {
+    border: 1px solid $white;
+    color: $white;
+  }
+}

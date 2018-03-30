@@ -1,12 +1,10 @@
-// You will use that file to import all your scripts
-// Ex: import gallery from './gallery'
 import svgIcons from '../icons/svg-icons';
+import navigation from './organisms/navigation/navigation';
 
-svgIcons(); // Must run as soon as possible
+svgIcons();
 
 (function ($) {
   $(document).ready(function () {
-    // Run your imported scripts
-    // Ex: gallery();
+    navigation();
   });
 })(jQuery);
