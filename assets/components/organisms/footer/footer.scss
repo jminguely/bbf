@@ -1,1 +1,19 @@
 @charset 'utf-8';
+
+.site-footer {
+  background: $black;
+
+  .disclaimer {
+    background: lighten($black, 15%);
+    font-size: 0.625em;
+    font-family: $font-gilroy;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+
+    a,
+    a:visited {
+      color: inherit;
+    }
+  }
+}

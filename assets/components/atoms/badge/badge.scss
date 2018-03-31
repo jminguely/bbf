@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 .badge {
+  position: relative;
   display: inline-block;
   width: 2.5em;
   height: 2.5em;
@@ -21,33 +22,37 @@
     }
   }
 
-  &.badge-outline {
-    position: relative;
-    border: 1px solid $white;
-    color: $white;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+
+  &:hover {
+    .icon {
+      color: theme-color("primary");
+    }
 
     &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      background: $white;
-      transform: translate(-50%, -50%) scale(0);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-      z-index: 5;
+      transform: translate(-50%, -50%) scale(1);
     }
+  }
 
-    &:hover {
-      .icon {
-        color: $red;
-      }
+  &.badge-primary {
+    background: theme-color("primary");
+    color: $white;
+  }
 
-      &:before {
-        transform: translate(-50%, -50%) scale(1);
-      }
-    }
+  &.badge-outline {
+    border: 1px solid $white;
+    color: $white;
   }
 }
