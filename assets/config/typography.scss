@@ -5,4 +5,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-gilroy;
+  font-weight: 700;
+}
+
+.lead {
+  font-family: $font-gilroy;
+  font-weight: 500;
+}
+
+.half-opacity {
+  opacity: 0.5;
 }

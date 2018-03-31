@@ -4,32 +4,40 @@
   overflow: hidden;
 }
 
+.navigation-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-sticky + 1;
+}
+
 .navigation-wrapper {
-  background: $red;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: $red;
   z-index: $zindex-modal;
   opacity: 0;
-  transition: opacity 0.3s, transform 0s 0.3s;
   transform: translateX(-100%);
+  transition: opacity 0.3s, transform 0s 0.3s;
 
   .navigation {
     overflow-y: scroll;
+    min-height: 700px;
     height: 100%;
   }
 
   .navigation-visible & {
     opacity: 1;
-    transition: opacity 0.3s, transform 0s 0s;
     transform: translateX(0);
+    transition: opacity 0.3s, transform 0s 0s;
   }
 
   .toggle-navigation {
-    color: $white;
     font-size: 1.1em;
+    color: $white;
     padding-top: 0.5em;
 
     svg {
@@ -45,14 +53,15 @@
   }
 
   a {
+    font-size: 3.5em;
+    line-height: 1.2em;
+    font-weight: 700;
+    font-family: $font-gilroy;
     color: $white;
     opacity: 0.3;
-    font-family: $font-gilroy;
-    font-size: 3.5em;
-    color: $white;
     letter-spacing: 0;
-    line-height: 1.2em;
 
+    &.active,
     &:hover {
       opacity: 1;
       text-decoration: none;
