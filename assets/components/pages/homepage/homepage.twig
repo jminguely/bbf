@@ -26,7 +26,61 @@
           "molecules::news-teaser/news-teaser.twig" with { teaser_title : 'Préparation au CSSB 2017' } %}
         </div>
         <div class="col-md-4 mb-4 mb-md-0">
-            {% include "molecules::news-teaser/news-teaser.twig" %}
+          {% include "molecules::news-teaser/news-teaser.twig" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container py-7">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-10">
+              <h2 class="my-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-2">
+              <div class="row mb-3">
+                <div class="col-sm-6">
+                  <h4 class="half-opacity mb-5">Ensemble A</h4>
+                  {% include "molecules::event-teaser/event-teaser.twig" %}
+                  {% include "molecules::event-teaser/event-teaser.twig" with {
+                      event_title : 'Championnat suisse des brass bands à Montreux',
+                      event_infos : 'Auditorium Stravinsky, Montreux - heure à définir'
+                    }
+                  %}
+                </div>
+                <div class="col-sm-6">
+                  <h4 class="half-opacity mb-5">Ensemble B</h4>
+                  {% include "molecules::event-teaser/event-teaser.twig" with {
+                      event_title : 'Concert HEMU',
+                      event_infos : 'Bicubic, Romont - 20h00'
+                    }
+                  %}
+                  {% include "molecules::event-teaser/event-teaser.twig" with {
+                      event_title : 'Concert de Gala',
+                      event_infos : 'Place de fête, Attalens, Suisse - 20h00'
+                    }
+                  %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" class="btn btn-primary">
+                    Tous les évènements
+                    <svg class="icon icon-right icon-arrow_right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 d-none d-md-block">
+          <img src="../images/agenda_thumbnail.jpg" alt="" class="img-fluid">
         </div>
       </div>
     </div>

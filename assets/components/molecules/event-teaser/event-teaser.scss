@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+.event-teaser {
+  min-height: 9em;
+
+  .infos {
+    opacity: 0.35;
+    font-family: $font-gilroy;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.625em;
+  }
+}
