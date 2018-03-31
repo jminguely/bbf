@@ -10,7 +10,8 @@
 
   .toggle-navigation {
     position: relative;
-    bottom: -4em;
+    bottom: -75px;
+    transform: translateY(-50%);
   }
 }
 
