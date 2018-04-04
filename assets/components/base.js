@@ -1,10 +1,9 @@
-import svgIcons from '../icons/svg-icons';
+/* global jQuery */
+
 import navigation from './organisms/navigation/navigation';
 
-svgIcons();
-
-(function ($) {
-  $(document).ready(function () {
+(($) => {
+  $(document).ready(() => {
     navigation();
   });
 })(jQuery);

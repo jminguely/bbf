@@ -1,23 +1,21 @@
-<header class="site-header" role="banner">
-
-  <h1><a href="{{site.link}}">{{site.title}}</a></h1>
-  <nav role="navigation">
-    <ul class="page-list">
-      {% for item in menu.get_items %}
-        <li class="page-list-item {{ item.classes|join(' ') }}">
-          <a class="page-list-link" href="{{ item.link }}">{{ item.title }}</a>
-
-          {% if item.children %}
-            <ul class="page-list">
-              {% for subItem in item.children %}
-                <li class="page-list-item {{ subItem.classes|join(' ') }}">
-                  <a class="page-list-link" href="{{ subItem.link }}">{{ subItem.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<header class="site-header pt-4 pb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <h1>
+          <a href="{{site.link}}">
+            <img class="site-logo" src="{{ theme.link }}/build/svg/logo_bbf.svg" alt="BBF - Brass Band Fribourg">
+          </a>
+        </h1>
+      </div>
+      <div class="col-6 text-right">
+        <a href="#" class="toggle-navigation btn btn-primary">
+          Menu
+          <svg class="icon icon-right">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>

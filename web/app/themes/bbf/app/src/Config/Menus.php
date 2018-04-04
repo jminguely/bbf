@@ -16,6 +16,7 @@ class Menus
         add_action($action, function () {
             register_nav_menus([
                 'main-nav' => __('Main Navigation'),
+                'footer-nav' => __('Footer Navigation'),
             ]);
         });
     }

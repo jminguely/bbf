@@ -4,21 +4,15 @@
 {% include 'html-header.twig' %}
 
 <body class="{{ body_class }}">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        {% include 'components/common/site-header.twig' %}
 
-          {% block content %}
-            <p>Sorry, no content</p>
-          {% endblock %}
-
-          {% include 'components/common/site-footer.twig' %}
-
-          {% include 'html-footer.twig' %}
-        </body>
-      </div>
-    </div>
+  {% include 'components/common/site-header.twig' %}
+  {% include 'components/common/navigation.twig' %}
+  <div class="site-wrapper">
+    {% block content %}
+      <p>Sorry, no content</p>
+    {% endblock %}
   </div>
-
+  {% include 'components/common/site-footer.twig' %}
+  {% include 'html-footer.twig' %}
+</body>
 </html>

@@ -14,8 +14,17 @@ class Site extends TimberSite
         add_filter('timber_context', [$this, 'addToContext']);
         add_action('admin_menu', [$this, 'disable_comments_admin_menu']);
         add_action('init', [$this, 'disable_comments_admin_bar']);
+        // add_filter( 'show_admin_bar' , [$this, 'my_function_admin_bar']);
+        add_action('get_header', [$this, 'remove_admin_login_header']);
 
         parent::__construct();
+    }
+
+    public function my_function_admin_bar(){ return false; }
+
+    public function remove_admin_login_header() {
+        echo 'ya';exit;
+        remove_action('wp_head', '_admin_bar_bump_cb');
     }
 
     public function disable_comments_admin_menu() {
@@ -44,6 +53,7 @@ class Site extends TimberSite
         // versatile than Wordpress's wp_nav_menu. (You need never again rely on a
         // crazy "Walker Function!")
         $data['menu'] = new Menu('main-nav');
+        $data['footer_menu'] = new Menu('footer-nav');
 
         return $data;
     }
