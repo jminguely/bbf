@@ -52,7 +52,7 @@
     padding: 0;
   }
 
-  a {
+  .menu-item a {
     font-size: 3.5em;
     line-height: 1.2em;
     font-weight: 700;
@@ -60,11 +60,11 @@
     color: $white;
     opacity: 0.3;
     letter-spacing: 0;
+  }
 
-    &.active,
-    &:hover {
-      opacity: 1;
-      text-decoration: none;
-    }
+  .menu-item.current-menu-item a,
+  .menu-item :hover a {
+    opacity: 1;
+    text-decoration: none;
   }
 }
