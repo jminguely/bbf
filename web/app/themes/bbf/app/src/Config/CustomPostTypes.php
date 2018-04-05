@@ -3,6 +3,7 @@
 namespace App\Config;
 
 use App\PostTypes\Event;
+use App\PostTypes\Gallery;
 
 class CustomPostTypes
 {
@@ -67,7 +68,30 @@ class CustomPostTypes
                     'title'
                 ],
                 'rewrite' => [
-                    'slug' => 'project',
+                    'slug' => 'event',
+                ],
+                'show_in_nav_menus' => true,
+            ]
+        );
+
+        //Gallery
+        register_post_type(
+            Gallery::postType(),
+            [
+                'labels' => [
+                    'name' => __('Galeries', 'bbf'),
+                    'singular_name' => __('Galerie', 'bbf')
+                ],
+                'menu_icon'  => 'dashicons-format-gallery',
+                'public' => true,
+                'has_archive' => false,
+                'supports' => [
+                    'title',
+                    'thumbnail'
+
+                ],
+                'rewrite' => [
+                    'slug' => 'gallery',
                 ],
                 'show_in_nav_menus' => true,
             ]

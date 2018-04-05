@@ -1,9 +1,10 @@
 html {
-
+  background: $darkgray;
 }
 
 .site-wrapper {
   padding-top: 100px;
+  min-height: calc(100vh - 370px);
 }
 
 .bg-lightgray {
