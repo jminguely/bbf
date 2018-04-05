@@ -28,16 +28,14 @@
         </a>
       </div>
     </div>
+
+
     <div class="row pt-5 d-flex flex-row">
-      <div class="col-md-4 mb-4 mb-md-0">
-        {% include 'components/news/news-teaser.twig' %}
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0">
-        {% include 'components/news/news-teaser.twig'  with { teaser_title : 'Préparation au CSSB 2017' } %}
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0">
-        {% include 'components/news/news-teaser.twig'  %}
-      </div>
+      {% for post in posts %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          {% include 'components/news/news-teaser.twig' %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>

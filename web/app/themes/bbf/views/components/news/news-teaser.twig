@@ -1,11 +1,11 @@
-<a href="#" class="news-teaser d-flex flex-column h-100">
+<a href="{{ post.link }}" class="news-teaser d-flex flex-column h-100">
   <figure class="thumbnail">
-    <img src="{{ theme.link }}/build/images/home_cover.jpg">
+    <img src="{{ post.thumbnail.src }}">
   </figure>
   <div class="content">
-    <time class="half-opacity" datetime="2008-02-14 20:00">12 décembre 2017</time>
+    <time class="half-opacity" datetime="2008-02-14 20:00">{{ post.post_date|date('j F Y') }}</time>
     <h4 class="mt-3">
-      {{ teaser_title|default('Du travail assidu avec Christophe Jeanbourquin')}}
+      {{ post.title }}
     </h4>
   </div>
   <div class="px-3 mt-auto">

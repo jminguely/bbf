@@ -14,8 +14,16 @@ class CustomPostTypes
         add_filter( 'manage_edit-event_sortable_columns', ['App\Config\CustomPostTypes', 'set_custom_event_sortable_columns'] );
         add_action( 'pre_get_posts', ['App\Config\CustomPostTypes', 'event_custom_orderby'] );
 
+        add_action('init', ['App\Config\CustomPostTypes', 'ev_unregister_taxonomy']);
+
         add_action('init', [get_called_class(), 'types']);
     }
+
+    public static function ev_unregister_taxonomy(){
+        register_taxonomy('post_tag', array());
+        register_taxonomy('category', array());
+    }
+
 
     public function add_new_event_column($columns) {
         $columns['event_date'] = 'Event Date';
