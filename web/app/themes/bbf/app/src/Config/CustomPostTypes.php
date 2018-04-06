@@ -9,33 +9,41 @@ class CustomPostTypes
 {
     public static function register()
     {
-        add_action('manage_event_posts_columns', ['App\Config\CustomPostTypes', 'add_new_event_column']);
-        add_action('manage_event_posts_custom_column', ['App\Config\CustomPostTypes', 'add_new_event_admin_column_show_value'], 10, 2);
-        add_filter( 'manage_edit-event_sortable_columns', ['App\Config\CustomPostTypes', 'set_custom_event_sortable_columns'] );
-        add_action( 'pre_get_posts', ['App\Config\CustomPostTypes', 'event_custom_orderby'] );
+        add_action('manage_gallery_posts_columns', ['App\Config\CustomPostTypes', 'manage_gallery_date_column']);
+        add_action('manage_event_posts_columns', ['App\Config\CustomPostTypes', 'manage_event_date_column']);
+        add_action('manage_event_posts_custom_column', ['App\Config\CustomPostTypes', 'manage_event_admin_column_show_value'], 10, 2);
+        add_filter('manage_edit-event_sortable_columns', ['App\Config\CustomPostTypes', 'set_custom_event_sortable_columns']);
+        add_action('pre_get_posts', ['App\Config\CustomPostTypes', 'event_custom_orderby']);
 
-        add_action('init', ['App\Config\CustomPostTypes', 'ev_unregister_taxonomy']);
-
+        add_action('init', ['App\Config\CustomPostTypes', 'post_unregister_taxonomy']);
         add_action('init', [get_called_class(), 'types']);
     }
 
-    public static function ev_unregister_taxonomy(){
-        register_taxonomy('post_tag', array());
-        register_taxonomy('category', array());
-    }
-
-
-    public function add_new_event_column($columns) {
-        $columns['event_date'] = 'Event Date';
+    public static function manage_gallery_date_column($columns) {
+        unset($columns['date']);
 
         return $columns;
     }
 
-    public static function add_new_event_admin_column_show_value( $column, $post_id ) {
+    public static function manage_event_date_column($columns) {
+        $columns['event_date'] = 'Event Date';
+        $columns['formation'] = 'Formation';
+        unset($columns['date']);
+
+        return $columns;
+    }
+
+    public static function manage_event_admin_column_show_value( $column, $post_id ) {
         if ($column == 'event_date') {
-            $evdate = get_field('date');
-            echo $evdate;
+            $field = get_field('event_date');
+            echo $field;
         }
+        if ($column == 'formation') {
+            $field = get_field('formation');
+            echo $field;
+        }
+
+
     }
 
     /* Make the column sortable */
@@ -52,12 +60,15 @@ class CustomPostTypes
         $orderby = $query->get('orderby');
 
         if ( 'event_date' == $orderby ) {
-            $query->set( 'meta_key', 'date' );
+            $query->set( 'meta_key', 'event_date' );
             $query->set( 'orderby', 'meta_value' );
         }
     }
 
-
+    public static function post_unregister_taxonomy(){
+        register_taxonomy('post_tag', array());
+        register_taxonomy('category', array());
+    }
 
     public static function types()
     {
