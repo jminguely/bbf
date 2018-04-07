@@ -1,12 +1,22 @@
 @charset 'utf-8';
 
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  background: $white;
-  box-shadow: 0 0 13px 0 transparentize($black, 0.88);
   z-index: $zindex-sticky;
+
+  .top-bar {
+    position: relative;
+    z-index: 10;
+    background: $white;
+    box-shadow: 0 0 13px 0 transparentize($black, 0.88);
+  }
+
+  .sub-navigation {
+    position: relative;
+    z-index: 5;
+  }
 
   .toggle-navigation {
     position: relative;

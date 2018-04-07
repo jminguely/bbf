@@ -1,11 +1,10 @@
 @charset 'utf-8';
 
 .btn {
-  padding: 0.9em 1.8em 0.7em;
+  padding: 0.9em 1.8em;
   font-size: 0.75em;
   border-radius: 1.75em;
-  font-family: $font-gilroy;
-  font-weight: 500;
+  font-weight: 400;
 
   &.btn-default {
     padding-left: 0;

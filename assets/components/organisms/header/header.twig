@@ -1,19 +1,24 @@
-<header class="site-header pt-4 pb-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h1>
-          <img class="site-logo" src="../svg/logo_bbf.svg" alt="BBF - Brass Band Fribourg">
-        </h1>
-      </div>
-      <div class="col-6 text-right">
-        <a href="#" class="toggle-navigation btn btn-primary">
-          Menu
-          <svg class="icon icon-right">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
-          </svg>
-        </a>
+<header class="site-header">
+  <div class="top-bar pt-4 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>
+            <img class="site-logo" src="../svg/logo_bbf.svg" alt="BBF - Brass Band Fribourg">
+          </h1>
+        </div>
+        <div class="col-6 text-right">
+          <a href="#" class="toggle-navigation btn btn-primary">
+            Menu
+            <svg class="icon icon-right">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+  {% if sub_navigation %}
+    {% include "molecules::sub-navigation/sub-navigation.twig" %}
+  {% endif %}
 </header>

@@ -1,4 +1,3 @@
-{{ source('../icons/icons.svg') }}
 {% include "organisms::header/header.twig" %}
 {% include "organisms::navigation/navigation.twig" %}
 <div class="site-wrapper">
@@ -43,30 +42,7 @@
           </div>
           <div class="row">
             <div class="col-md-10 offset-md-2">
-              <div class="row mb-3">
-                <div class="col-sm-6">
-                  <h4 class="half-opacity mb-5">Ensemble A</h4>
-                  {% include "molecules::event-teaser/event-teaser.twig" %}
-                  {% include "molecules::event-teaser/event-teaser.twig" with {
-                      event_title : 'Championnat suisse des brass bands à Montreux',
-                      event_infos : 'Auditorium Stravinsky, Montreux - heure à définir'
-                    }
-                  %}
-                </div>
-                <div class="col-sm-6">
-                  <h4 class="half-opacity mb-5">Ensemble B</h4>
-                  {% include "molecules::event-teaser/event-teaser.twig" with {
-                      event_title : 'Concert HEMU',
-                      event_infos : 'Bicubic, Romont - 20h00'
-                    }
-                  %}
-                  {% include "molecules::event-teaser/event-teaser.twig" with {
-                      event_title : 'Concert de Gala',
-                      event_infos : 'Place de fête, Attalens, Suisse - 20h00'
-                    }
-                  %}
-                </div>
-              </div>
+              {% include "organisms::event-table/event-table.twig" %}
               <div class="row">
                 <div class="col-12">
                   <a href="#" class="btn btn-primary">
@@ -88,3 +64,4 @@
   </section>
 </div>
 {% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}

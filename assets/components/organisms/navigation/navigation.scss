@@ -60,10 +60,11 @@
     color: $white;
     opacity: 0.3;
     letter-spacing: 0;
+    text-decoration: none;
   }
 
   .menu-item.current-menu-item a,
-  .menu-item :hover a {
+  .menu-item:hover a {
     opacity: 1;
     text-decoration: none;
   }

@@ -50,11 +50,14 @@ $font-graphik: 'Graphik', sans-serif;
 @import 'atoms/button/button';
 @import 'atoms/icon/icon';
 @import 'atoms/badge/badge';
+@import 'atoms/image/image';
 
 //
 // molecules:
 @import 'molecules/news-teaser/news-teaser';
 @import 'molecules/event-teaser/event-teaser';
+@import 'molecules/sub-navigation/sub-navigation';
+@import 'molecules/event-item/event-item';
 
 //
 // organisms:
@@ -62,3 +65,4 @@ $font-graphik: 'Graphik', sans-serif;
 @import 'organisms/footer/footer';
 @import 'organisms/navigation/navigation';
 @import 'organisms/jumbotron/jumbotron';
+@import 'organisms/event-table/event-table';

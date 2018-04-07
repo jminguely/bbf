@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.sub-navigation {
+  border-bottom: 1px solid transparentize($black, 0.9);
+  background: $white;
+  line-height: 1;
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 1.3em;
+
+      &:last-child {
+        margin-right: none;
+      }
+    }
+  }
+
+  a {
+    padding: 1em 0;
+    font-family: $font-gilroy;
+    font-size: 0.75em;
+    font-weight: 500;
+    color: $black;
+    letter-spacing: 0.015em;
+    text-decoration: none;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
