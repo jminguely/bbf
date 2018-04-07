@@ -1,0 +1,33 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper pt-sm-9 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-1">
+        <time datetime="2008-02-14 20:00">12 décembre 2017</time>
+        <h2 class="my-4">Retour de Maurice Donnet-Monay à la tête du BBF/A</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7 offset-md-1">
+        <img class="img-fluid" src="../images/home_cover.jpg">
+        <div class="row half-opacity pt-5 main-content">
+          <div class="col-md-11 pb-5">
+            <p>Nam pulvinar magna et bibendum eleifend. Curabitur ornare, orci at cursus dignissim, lorem nisi feugiat odio, ac egestas lorem lorem tincidunt ipsum. Praesent et mi mauris. Quisque ultricies felis at dolor fermentum vestibulum. Aenean elementum aliquet augue, ut finibus sem consequat eget. Etiam nunc velit, ullamcorper non dolor sed, auctor ultrices ante. Nunc cursus aliquet nibh, et bibendum felis euismod in. Sed mattis urna ex, ac condimentum turpis maximus et. Duis sollicitudin mi metus, elementum sodales turpis posuere at. Etiam massa nulla, semper vitae dignissim eu, tempus porta risus.</p>
+            {% include "atoms::blockquote/blockquote.twig" %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque odio, malesuada quis odio eget, convallis ultrices turpis. Nullam mauris sem, fringilla eu ante quis, mattis dapibus ligula. Fusce fringilla tincidunt pulvinar. Etiam pellentesque dui at ligula ullamcorper tempor eu vel leo. Morbi interdum euismod ipsum, at rhoncus diam faucibus at. Pellentesque non luctus felis. Pellentesque nec dolor eros. In pharetra arcu ut maximus auctor. Suspendisse potenti. Phasellus vel malesuada sapien. Donec ornare tristique ante ac cursus. Cras ultrices nisi quis vestibulum placerat. Fusce sed sem non arcu congue.</p>
+            <p>Nam pulvinar magna et bibendum eleifend. Curabitur ornare, orci at cursus dignissim, lorem nisi feugiat odio, ac egestas lorem lorem tincidunt ipsum. Praesent et mi mauris. Quisque ultricies felis at dolor fermentum vestibulum. Aenean elementum aliquet augue, ut finibus sem consequat eget. Etiam nunc velit, ullamcorper non dolor sed, auctor ultrices ante. Nunc cursus aliquet nibh, et bibendum felis euismod in. Sed mattis urna ex, ac condimentum turpis maximus et. Duis sollicitudin mi metus, elementum sodales turpis posuere at. Etiam massa nulla, semper vitae dignissim eu, tempus porta risus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 px-md-5">
+        <h4 class="mb-4">Articles favoris</h4>
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+      </div>
+    </div>
+  </div>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}
