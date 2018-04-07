@@ -38,7 +38,7 @@
     <div class="row pt-5 d-flex flex-row">
       {% for post in posts %}
         <div class="col-md-4 mb-4 mb-md-0">
-          {% include 'components/news/news-teaser.twig' %}
+          {% include 'components/news/news-teaser-card.twig' %}
         </div>
       {% endfor %}
     </div>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="col-md-5 d-none d-md-block">
-        <img src="{{ theme.link }}/build/images/agenda_thumbnail.jpg" alt="" class="img-fluid">
+        <img src="{{ theme.link }}/build/images/agenda_figure.jpg" alt="" class="img-fluid">
       </div>
     </div>
   </div>

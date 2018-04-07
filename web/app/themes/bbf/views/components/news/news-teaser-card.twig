@@ -1,0 +1,20 @@
+<a href="{{ post.link }}" class="news-teaser news-teaser-card d-flex flex-column h-100">
+  <figure class="thumbnail">
+    <img src="{{ post.thumbnail.src }}">
+  </figure>
+  <div class="content">
+    <time class="half-opacity" datetime="2008-02-14 20:00">{{ post.post_date|date('j F Y') }}</time>
+    <h4 class="mt-3">
+      {{ post.title }}
+    </h4>
+  </div>
+  <div class="px-3 mt-auto">
+    <hr class="mt-3 mb-2">
+  </div>
+  <span class="btn btn-default p-3 text-left">
+      Lire l'article
+      <svg class="icon icon-right icon-arrow_right">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+      </svg>
+  </span>
+</a>

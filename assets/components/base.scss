@@ -54,10 +54,12 @@ $font-graphik: 'Graphik', sans-serif;
 
 //
 // molecules:
-@import 'molecules/news-teaser/news-teaser';
+@import 'molecules/news-teaser-card/news-teaser-card';
 @import 'molecules/event-teaser/event-teaser';
 @import 'molecules/sub-navigation/sub-navigation';
 @import 'molecules/event-item/event-item';
+@import 'molecules/news-teaser/news-teaser';
+@import 'molecules/news-teaser-small/news-teaser-small';
 
 //
 // organisms:

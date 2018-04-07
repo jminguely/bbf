@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.news-teaser-card {
+  box-shadow: 0 0 30px 0 transparentize($black, 0.93);
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: 0 0 60px 0 transparentize($black, 0.63);
+  }
+
+  .content {
+    padding: 0 1em;
+  }
+}

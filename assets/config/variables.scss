@@ -32,3 +32,12 @@ $spacers: map-merge((
   9: ($spacer * 7),
   10: ($spacer * 8)
 ), $spacers);
+
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  33: 33%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+), $sizes);

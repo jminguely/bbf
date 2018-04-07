@@ -1,0 +1,56 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <a href="#" class="jumbotron jumbotron-fluid dark-overlay d-block bg-inverse text-white align-text-bottom">
+          <div class="container jumbotron-content px-5">
+            <div class="row">
+              <div class="col-md-6">
+                <time datetime="2008-02-14 20:00">12 décembre 2017</time>
+                <h2 class="my-4">Retour de Maurice Donnet-Monay à la tête du BBF/A</h2>
+                <span class="btn btn-primary btn-lg" href="#" role="button">Lire l'article →</span>
+              </div>
+            </div>
+          </div>
+          <img class="cover-image" src="../images/home_cover.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row news-flow">
+          <div class="col-md-6 mb-4">
+            {% include "molecules::news-teaser/news-teaser.twig" %}
+          </div>
+          <div class="col-md-6 mb-4">
+            {% include "molecules::news-teaser/news-teaser.twig" %}
+          </div>
+          <div class="col-md-6 mb-4">
+            {% include "molecules::news-teaser/news-teaser.twig" %}
+          </div>
+          <div class="col-md-6 mb-4">
+            {% include "molecules::news-teaser/news-teaser.twig" %}
+          </div>
+          <div class="col-md-12 mb-6">
+            <a href="#" class="btn btn-primary">
+              Plus de news
+              <svg class="icon icon-right icon-arrow_right">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 px-5">
+        <h4 class="mb-4">Articles favoris</h4>
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+        {% include "molecules::news-teaser-small/news-teaser-small.twig" %}
+      </div>
+    </div>
+  </div>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}
