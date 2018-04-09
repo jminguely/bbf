@@ -1,0 +1,8 @@
+<div class="event-item mb-4">
+  <time class="text-primary">{{ event.event_date|date('j F Y') }}</time>
+  <h4 class="h3 my-3">{{ event.title }}</h4>
+  <p class="my-0 py-0">{{ event.informations }}</p>
+  {% if event.details %}
+    <p class="half-opacity">{{ event.details }}</p>
+  {% endif %}
+</div>

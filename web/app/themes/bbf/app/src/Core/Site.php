@@ -45,6 +45,10 @@ class Site extends TimberSite
         $data['menu'] = new Menu('main-nav');
         $data['footer_menu'] = new Menu('footer-nav');
 
+        $data['event_archive_url'] = get_permalink( get_page_by_path( 'agenda' ) );
+        $data['post_archive_url'] = get_post_type_archive_link( 'post' );
+        $data['gallery_archive_url'] = get_post_type_archive_link( 'gallery' );
+
         return $data;
     }
 

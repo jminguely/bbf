@@ -9,6 +9,7 @@ class CustomPostTypes
 {
     public static function register()
     {
+        add_action( 'template_redirect', ['App\Config\CustomPostTypes', 'bbf_redirect_post'] );
         add_action('manage_gallery_posts_columns', ['App\Config\CustomPostTypes', 'manage_gallery_date_column']);
         add_action('manage_event_posts_columns', ['App\Config\CustomPostTypes', 'manage_event_date_column']);
         add_action('manage_event_posts_custom_column', ['App\Config\CustomPostTypes', 'manage_event_admin_column_show_value'], 10, 2);
@@ -18,6 +19,14 @@ class CustomPostTypes
         add_action('init', ['App\Config\CustomPostTypes', 'post_unregister_taxonomy']);
         add_action('init', [get_called_class(), 'types']);
     }
+
+    public static function bbf_redirect_post() {
+        $queried_post_type = get_query_var('post_type');
+        if ( is_single() && 'event' ==  $queried_post_type ) {
+          wp_redirect( get_permalink( get_page_by_path( 'agenda' ) ), 301 );
+          exit;
+        }
+      }
 
     public static function manage_gallery_date_column($columns) {
         unset($columns['date']);
@@ -103,7 +112,7 @@ class CustomPostTypes
                 ],
                 'menu_icon'  => 'dashicons-format-gallery',
                 'public' => true,
-                'has_archive' => false,
+                'has_archive' => true,
                 'supports' => [
                     'title',
                     'thumbnail'

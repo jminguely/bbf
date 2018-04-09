@@ -29,7 +29,7 @@ $post = new Post();
 
 $context['post'] = $post;
 
-$context['title'] = $post->title;
+$context['title'] = $post->displayed->title ? $post->displayed->title : $post->title;
 $context['content'] = $post->content;
 
 Timber::render(['generic-page.twig'], $context);

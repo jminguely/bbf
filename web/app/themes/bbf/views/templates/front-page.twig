@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-6">
         <h2>{{ page.title }}</h2>
-        <p class="lead half-opacity">{{ page.content|striptags }}.</p>
+        <p class="lead half-opacity">{{ page.content|striptags }}</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">
           En savoir plus
           <svg class="icon icon-right icon-arrow_right">
@@ -16,7 +16,11 @@
       </div>
     </div>
   </div>
-  <img class="cover-image" src="{{ theme.link }}/build/images/home_cover.jpg">
+  {% if page.thumbnail.src %}
+    <img class="cover-image" src="{{ page.thumbnail.src }}">
+  {% else %}
+    <img class="cover-image" src="{{ theme.link }}/build/images/home_cover.jpg">
+  {% endif %}
 </section>
 <section class="bg-lightgray">
   <div class="container py-7">
@@ -33,8 +37,6 @@
         </a>
       </div>
     </div>
-
-
     <div class="row pt-5 d-flex flex-row">
       {% for post in posts %}
         <div class="col-md-4 mb-4 mb-md-0">
@@ -50,28 +52,32 @@
       <div class="col-md-7">
         <div class="row">
           <div class="col-md-10">
-            <h2 class="my-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg!</h2>
+            <h2 class="my-5">{{ content }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-10 offset-md-2">
             <div class="row mb-3">
-              <div class="col-sm-6">
-                <h4 class="half-opacity mb-5">Ensemble A</h4>
+              <div class="col-12">
+                <div class="event-table my-md-4">
+                  <div class="event-cell">
+                    <h4 class="half-opacity mb-5">Ensemble A</h4>
+                  </div>
                 {% for event in events.a %}
-                  {% include 'components/event/event-teaser.twig' %}
-                {% endfor %}
+                    {% include 'components/event/event-teaser.twig' %}
+                  {% endfor %}
+                  <div class="event-cell">
+                    <h4 class="half-opacity mb-5">Ensemble B</h4>
+                  </div>
+                  {% for event in events.b %}
+                    {% include 'components/event/event-teaser.twig' %}
+                  {% endfor %}
+                </div>
               </div>
-              <div class="col-sm-6">
-                <h4 class="half-opacity mb-5">Ensemble B</h4>
-                {% for event in events.b %}
-                  {% include 'components/event/event-teaser.twig' %}
-                {% endfor %}
               </div>
-            </div>
             <div class="row">
               <div class="col-12">
-                <a href="#" class="btn btn-primary">
+                <a href="{{ event_archive_url }}" class="btn btn-primary">
                   Tous les évènements
                   <svg class="icon icon-right icon-arrow_right">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>

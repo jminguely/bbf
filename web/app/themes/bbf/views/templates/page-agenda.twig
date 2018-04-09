@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="pt-sm-9 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 offset-md-1">
+        <h2>{{ title }}</h2>
+        <p class="lead half-opacity">{{ page.content|striptags }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 offset-md-2 mb-8">
+        <h3 id="formation-a" class="text-primary mb-4 pt-8">Formation A</h3>
+        {% for event in events.a %}
+          {% include 'components/event/event-item.twig' %}
+          <hr class="my-5">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <img src="{{ page.thumbnail.src }}" class="img-full">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-7 offset-md-2 mb-8">
+        <h3 id="formation-b" class="text-primary mb-4 pt-8">Formation B</h3>
+        {% for event in events.b %}
+          {% include 'components/event/event-item.twig' %}
+          <hr class="my-5">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

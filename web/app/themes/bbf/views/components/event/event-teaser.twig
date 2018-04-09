@@ -1,5 +1,5 @@
 <div class="event-teaser mb-4">
   <time class="text-primary">{{ event.event_date|date('j F Y') }}</time>
-  <h4 class="h3 my-3">{{ event.title|default('Concert annuel') }}</h4>
-  <p class="infos">{{ event.informations|default('Salle Univers@lle, Châtel-Saint-Denis, Suissel') }}</p>
+  <h4 class="h3 my-3">{{ event.title }}</h4>
+  <p class="infos">{{ event.informations }}</p>
 </div>
