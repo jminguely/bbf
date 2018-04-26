@@ -1,9 +1,0 @@
-{
-  "generator-toolbox": {
-    "promptValues": {
-      "repo": "https://jminguely@bitbucket.org/jminguely/bbf.git",
-      "src": "assets/",
-      "dest": "web/app/themes/bbf/build/"
-    }
-  }
-}
