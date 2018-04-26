@@ -17,7 +17,7 @@ $page = new Page();
 
 $context['page'] = $page;
 
-$context['title'] = $page->title;
+$context['title'] = $page->displayed_title;
 $context['content'] = $page->content;
 
 $context['posts'] = Post::query(

@@ -25,7 +25,7 @@ time {
   text-decoration: none;
   text-transform: uppercase;
   font-family: $font-graphik;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .half-opacity {
@@ -40,4 +40,12 @@ time {
   p {
       margin-bottom: 2em;
   }
+}
+
+.text-small {
+  font-size: 0.75em;
+}
+
+.text-bold {
+  font-weight: 700;
 }

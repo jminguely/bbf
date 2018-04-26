@@ -44,15 +44,13 @@ class CustomPostTypes
 
     public static function manage_event_admin_column_show_value( $column, $post_id ) {
         if ($column == 'event_date') {
-            $field = get_field('event_date');
+            $field = date("j.m.Y", strtotime(get_field('event_date')));
             echo $field;
         }
         if ($column == 'formation') {
             $field = get_field('formation');
             echo $field;
         }
-
-
     }
 
     /* Make the column sortable */

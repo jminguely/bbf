@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <main class="py-sm-8 py-5">
+    <h1>{{ title }}</h1>
+    <p>{{ content|raw }}</p>
+    {% if page.sections %}
+      {% for section in page.get_field('sections') %}
+        {% include 'components/flex-sections/section-'~section.acf_fc_layout~'.twig' ignore missing %}
+      {% endfor %}
+    {% endif %}
+  </main>
+{% endblock %}

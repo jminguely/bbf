@@ -8,6 +8,7 @@ use App\Config\CustomPostTypes;
 use App\Config\CustomTaxonomies;
 use App\Config\Menus;
 use App\Functions\Assets;
+use App\Functions\Shortcodes;
 
 require_once('autoload.php');
 
@@ -37,6 +38,8 @@ CustomTaxonomies::register();
 
 // Register WordPress menus
 Menus::register();
+
+new Shortcodes;
 
 /**
  * ------------------
