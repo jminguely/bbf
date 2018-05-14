@@ -11,10 +11,20 @@
         <div class="row">
           {% for i in 1..6 %}
             <div class="col-md-6">
-              {% include "molecules::gallery-teaser/gallery-teaser.twig" with { image_number: i } %}
+              {% include "molecules::gallery-thumbnail/gallery-thumbnail.twig" with { image_number: i } %}
             </div>
           {% endfor %}
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center pb-7">
+        <a href="#" class="btn btn-primary">
+          Charger plus
+          <svg class="icon icon-right icon-arrow_right">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </div>

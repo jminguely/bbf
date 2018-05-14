@@ -7,6 +7,7 @@ use App\Config\ThemeSupport;
 use App\Config\CustomPostTypes;
 use App\Config\CustomTaxonomies;
 use App\Config\Menus;
+use App\Config\Images;
 use App\Functions\Assets;
 use App\Functions\Shortcodes;
 
@@ -38,6 +39,9 @@ CustomTaxonomies::register();
 
 // Register WordPress menus
 Menus::register();
+
+// Register WordPress images sizes
+Images::register();
 
 new Shortcodes;
 

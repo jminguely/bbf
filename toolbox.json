@@ -17,9 +17,14 @@
     "web/app/themes/bbf/build/fonts/**/*"
   ],
   "vendors": {
-    "css": [],
+    "css": [
+      "node_modules/photoswipe/dist/photoswipe.css"
+    ],
     "js": [
-      "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+      "node_modules/photoswipe/dist/photoswipe.js",
+      "node_modules/photoswipe/dist/photoswipe-ui-default.js",
+      "node_modules/vanilla-lazyload/dist/lazyload.min.js"
     ]
   },
   "singles": [{

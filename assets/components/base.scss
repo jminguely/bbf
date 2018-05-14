@@ -62,7 +62,7 @@ $font-graphik: 'Graphik', sans-serif;
 @import 'molecules/event-item/event-item';
 @import 'molecules/news-teaser/news-teaser';
 @import 'molecules/news-teaser-small/news-teaser-small';
-@import 'molecules/gallery-teaser/gallery-teaser';
+@import 'molecules/gallery-thumbnail/gallery-thumbnail';
 
 //
 // organisms:
@@ -71,3 +71,4 @@ $font-graphik: 'Graphik', sans-serif;
 @import 'organisms/navigation/navigation';
 @import 'organisms/jumbotron/jumbotron';
 @import 'organisms/event-table/event-table';
+@import 'organisms/gallery/gallery';
