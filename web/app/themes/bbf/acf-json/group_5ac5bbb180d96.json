@@ -5,7 +5,7 @@
         {
             "key": "field_5ace2273665ab",
             "label": "",
-            "name": "",
+            "name": "datetime",
             "type": "group",
             "value": null,
             "instructions": "",
@@ -33,7 +33,7 @@
                         "id": ""
                     },
                     "display_format": "d\/m\/Y",
-                    "return_format": "d\/m\/Y",
+                    "return_format": "Ymd",
                     "first_day": 1
                 },
                 {
@@ -50,8 +50,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "H:i-s",
-                    "return_format": "H:i-s"
+                    "display_format": "H:i",
+                    "return_format": "H:i"
                 }
             ]
         },
@@ -138,5 +138,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1524728591
+    "modified": 1526389329
 }

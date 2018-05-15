@@ -34,9 +34,9 @@ $today = date('Ymd', strtotime("now"));
 
 $context['events']['a'] = Event::query(
     array(
-        'meta_key' => 'event_date',
-        'orderby' => 'meta_key',
-        'order'   => 'desc',
+        'meta_key' => 'datetime_event_date',
+        'orderby' => 'meta_value_num',
+        'order'   => 'asc',
         'meta_query' => array(
             'relation' => 'AND',
             array(
@@ -45,7 +45,7 @@ $context['events']['a'] = Event::query(
                 'compare' => 'in'
             ),
             array(
-                'key' => 'event_date',
+                'key' => 'datetime_event_date',
                 'value' => $today,
                 'compare' => '>='
             )
@@ -54,11 +54,13 @@ $context['events']['a'] = Event::query(
         )
     );
 
+
+
     $context['events']['b'] = Event::query(
         array(
-            'meta_key' => 'event_date',
-            'orderby' => 'meta_key',
-            'order'   => 'desc',
+            'meta_key' => 'datetime_event_date',
+            'orderby' => 'meta_value_num',
+            'order'   => 'asc',
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
@@ -67,7 +69,7 @@ $context['events']['a'] = Event::query(
                     'compare' => 'in'
                 ),
                 array(
-                    'key' => 'event_date',
+                    'key' => 'datetime_event_date',
                     'value' => $today,
                     'compare' => '>='
                 )
@@ -75,5 +77,5 @@ $context['events']['a'] = Event::query(
             'posts_per_page' => '2'
             )
         );
-
+        
 Timber::render(['front-page.twig'], $context);

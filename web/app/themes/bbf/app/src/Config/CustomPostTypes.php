@@ -44,7 +44,7 @@ class CustomPostTypes
 
     public static function manage_event_admin_column_show_value( $column, $post_id ) {
         if ($column == 'event_date') {
-            $field = date("j.m.Y", strtotime(get_field('event_date')));
+            $field = date("d.m.Y", strtotime(get_field('datetime')["event_date"]));
             echo $field;
         }
         if ($column == 'formation') {
@@ -67,7 +67,7 @@ class CustomPostTypes
         $orderby = $query->get('orderby');
 
         if ( 'event_date' == $orderby ) {
-            $query->set( 'meta_key', 'event_date' );
+            $query->set( 'meta_key', 'datetime_event_date' );
             $query->set( 'orderby', 'meta_value' );
         }
     }
