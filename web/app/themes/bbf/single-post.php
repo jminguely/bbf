@@ -19,6 +19,14 @@ $post = new Post();
 $context['post'] = $post;
 
 $context['title'] = $post->title;
+
 $context['content'] = $post->content;
 
-Timber::render(['generic-page.twig'], $context);
+$context['posts'] = Post::query([
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order'   => 'desc',
+        'post__not_in' => array($post->ID),
+    ]);
+
+Timber::render(['single-post.twig'], $context);

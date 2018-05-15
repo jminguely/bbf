@@ -19,4 +19,4 @@ use App\PostTypes\Post;
 $context = Timber::get_context();
 $context['posts'] = Post::all();
 
-Timber::render(['posts.twig'], $context);
+Timber::render(['archive-news.twig'], $context);
