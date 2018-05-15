@@ -7,15 +7,15 @@
 
   .gallery-item {
     width: 50%;
-    padding: 0 $grid-gutter-width / 2;
     margin: 0;
-
-    figcaption {
-      display: none;
-    }
+    padding: 0 $grid-gutter-width / 2;
 
     @include media-breakpoint-down(xs) {
       width: 100%;
+    }
+
+    figcaption {
+      display: none;
     }
   }
 }
@@ -34,8 +34,8 @@
 .pswp__top-bar { background-color: transparent !important; }
 
 .pswp__caption__center {
-  color: $white;
   font-size: 1rem;
+  color: $white;
   text-align: center;
 }
 
@@ -46,8 +46,8 @@
 
 .pswp__counter {
   font-family: $font-family-sans-serif;
-  color: $white !important;
   font-size: 1rem;
+  color: $white !important;
 }
 
 .pswp__button:before { z-index: 9999; }
@@ -65,6 +65,6 @@
 }
 
 .pswp__button--arrow--right:after {
-  left: auto;
   right: 0;
+  left: auto;
 }

@@ -57,5 +57,11 @@ time {
   h4, .h4 { font-size: $h4-font-size * 0.75; }
   h5, .h5 { font-size: $h5-font-size * 0.75; }
   h6, .h6 { font-size: $h6-font-size * 0.75; }
+}
 
+.text-white {
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
 }
