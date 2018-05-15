@@ -17,12 +17,12 @@ class Shortcodes extends Timber {
         $data = [];
         $data['events'] = Event::query(
             array(
-                'meta_key' => 'event_date',
-                'orderby' => 'meta_key',
-                'order'   => 'desc',
+                'meta_key' => 'datetime_event_date',
+                'orderby' => 'meta_value_num',
+                'order'   => 'asc',
                 'meta_query' => array(
                     array(
-                        'key' => 'event_date',
+                        'key' => 'datetime_event_date',
                         'value' => $today,
                         'compare' => '>='
                     )
