@@ -48,8 +48,8 @@ class CustomPostTypes
             echo $field;
         }
         if ($column == 'formation') {
-            $field = get_field('formation');
-            echo $field;
+            $field = strtoupper(get_field('formation'));
+            echo '<strong>'.$field.'</strong>';
         }
     }
 

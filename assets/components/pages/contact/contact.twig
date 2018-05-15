@@ -1,0 +1,32 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper pt-sm-9 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-1">
+        <h2 class="my-4">Besoin d’une info ?<br>Contacte-nous!</h2>
+        <div class="half-opacity">
+          <p>Nous sommes régulièrement à la recherche de nouveaux musiciens, que ce soit pour l'ensemble A ou l'ensemble B. Nous cherchons également activement des occasions de nous produire sur scène. N'hésitez pas à prendre contact avec nous, pour toutes questions !</p>
+        </div>
+      </div>
+    </div>
+    <div class="row my-7">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          {% for i in 1..4 %}
+            <div class="col-lg-3 col-sm-6 mb-5">
+              <h4>Président Brass Band Fribourg</h4>
+              <p>
+                Sébastien Cottet<br>
+                <a href="+41 79 837 / 37 82">+41 79 837 / 37 82</a><br>
+                <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}
