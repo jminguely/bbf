@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying all flex pages.
- *
- * Template Name: Page flexible
+ * The template for displaying all pages
  *
  * @package  WordPress
  * @subpackage  Timber
@@ -13,11 +11,11 @@ use Timber\Timber;
 use App\PostTypes\Page;
 
 $context = Timber::get_context();
+
 $page = new Page();
 
 $context['page'] = $page;
 
-$context['title'] = $page->displayed_title;
-$context['content'] = $page->content;
+$context['title'] = $page->displayed_title ? $page->displayed_title : $page->title;
 
-Timber::render(['flexible-page.twig'], $context);
+Timber::render(['page-'.$page->slug.'.twig', 'page.twig'], $context);

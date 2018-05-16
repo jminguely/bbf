@@ -1,0 +1,15 @@
+<div class="row d-flex align-items-baseline">
+  <div class="col-md-6 offset-md-1 mb-4">
+    <h2 id="{{ section.slug }}" class="pt-4">
+      {{ section.displayed_title ? section.displayed_title : section.title}}
+    </h2>
+    <div>
+      {{ section.content }}
+    </div>
+  </div>
+  {% if section.content_sidebar %}
+    <div class="col-md-3 offset-md-1 mb-4">
+      {{ section.content_sidebar|shortcodes }}
+    </div>
+  {% endif %}
+</div>

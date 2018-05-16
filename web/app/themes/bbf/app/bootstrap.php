@@ -9,6 +9,7 @@ use App\Config\CustomTaxonomies;
 use App\Config\Menus;
 use App\Config\Images;
 use App\Functions\Assets;
+use App\Functions\Options;
 use App\Functions\Shortcodes;
 
 require_once('autoload.php');
@@ -42,6 +43,8 @@ Menus::register();
 
 // Register WordPress images sizes
 Images::register();
+
+new Options;
 
 new Shortcodes;
 

@@ -1,0 +1,10 @@
+<div class="row">
+  {% for member in members %}
+    <div class="col-6 col-md-4 col-lg-3">
+      <p>
+        {{ member.instrument }}<br>
+        <span class="half-opacity">{{ member.name }}</span>
+      </p>
+    </div>
+  {% endfor %}
+</div>

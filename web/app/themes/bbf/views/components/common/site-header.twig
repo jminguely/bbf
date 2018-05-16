@@ -25,11 +25,8 @@
       <div class="container">
         <nav>
           <ul>
-            {% for section in page.get_field('sections') %}
-              {% if section.acf_fc_layout == 'basic' or
-                section.acf_fc_layout == 'members' %}
-               <li><a href="#{{ section.title|sanitize }}" data-scrollto="true">{{ section.title }}</a></li>
-              {% endif %}
+            {% for section in page.children if section.post_type == "page" %}
+              <li><a href="#{{ section.slug }}" data-scrollto="true">{{ section.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>
