@@ -22,6 +22,22 @@
       {% endif %}
     </div>
   {% endif %}
+  {% if page.contacts %}
+  <div class="row mt-7">
+    <div class="col-md-10 offset-md-1">
+      <div class="row">
+        {% for contact in page.get_field('contacts') %}
+          <div class="col-lg-3 col-sm-6 mb-5 d-flex flex-column">
+            <h4>{{ contact.title }}</h4>
+            <div class="mt-auto">
+              {{ contact.content }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
   {% for section in page.children %}
     {% if section.post_type == "page" %}
       {% if section.thumbnail %}

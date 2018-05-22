@@ -16,6 +16,6 @@ $page = new Page();
 
 $context['page'] = $page;
 
-$context['title'] = $page->displayed_title ? $page->displayed_title : $page->title;
+$context['title'] = $page->displayed_title != "" ? $page->displayed_title : $page->title;
 
 Timber::render(['page-'.$page->slug.'.twig', 'page.twig'], $context);

@@ -1,0 +1,70 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="container pt-7">
+  {% if page.thumbnail %}
+    <div class="row">
+        <div class="col-md-10 offset-md-1 pb-3">
+          <img src="{{TimberImage(page.thumbnail).src("cover") }}" class="img-full pb-3" >
+        </div>
+    </div>
+  {% endif %}
+  <div class="row d-flex align-items-baseline">
+    <div class="col-md-6 offset-md-1 mb-4">
+      <h1 class="my-4">{{ title }}</h1>
+      {{ page.content }}
+    </div>
+    {% if page.content_sidebar %}
+      <div class="col-md-3 offset-md-1 mb-4">
+        {{ page.content_sidebar|shortcodes }}
+      </div>
+    {% endif %}
+  </div>
+  {% if page.logos %}
+    <div class="row mt-3 mb-7">
+      <div class="col-md-10 offset-md-1">
+        <div class="partners">
+          {% for logo in page.get_field("logos") %}
+            <a href="{{ logo.url }}" class="d-flex">
+              <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% if page.contact %}
+  <section class="bg-primary text-white py-7">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-1">
+          <div class="h1">
+            {{ page.contact }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% if page.children %}
+  <div class="container">
+    {% for section in page.children %}
+      {% if section.post_type == "page" %}
+        {% if section.thumbnail %}
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
+              </div>
+          </div>
+        {% endif %}
+        {% include 'components/section/section-page.twig' %}
+        {% if not loop.last %}
+          <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+</div>
+{% endblock %}
