@@ -8,6 +8,7 @@ use App\Config\CustomPostTypes;
 use App\Config\CustomTaxonomies;
 use App\Config\Menus;
 use App\Config\Images;
+use App\Config\CustomStyles;
 use App\Functions\Assets;
 use App\Functions\Options;
 use App\Functions\Shortcodes;
@@ -47,6 +48,8 @@ Images::register();
 new Options;
 
 new Shortcodes;
+
+new CustomStyles;
 
 /**
  * ------------------

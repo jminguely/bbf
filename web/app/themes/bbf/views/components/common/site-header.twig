@@ -25,6 +25,7 @@
       <div class="container">
         <nav>
           <ul>
+            <li><a href="#{{ page.slug }}" data-scrollto="true">{{ title }}</a></li>
             {% for section in page.children if section.post_type == "page" %}
               <li><a href="#{{ section.slug }}" data-scrollto="true">{{ section.title }}</a></li>
             {% endfor %}
