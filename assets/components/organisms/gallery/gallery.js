@@ -1,8 +1,6 @@
-/* globals $, PhotoSwipe, PhotoSwipeUI_Default, LazyLoad */
+/* globals $, PhotoSwipe, PhotoSwipeUI_Default */
 
 export default () => {
-  (() => new LazyLoad())();
-
   const $targets = $('.gallery').find('.gallery-item');
 
   if ($targets.length > 0) {
