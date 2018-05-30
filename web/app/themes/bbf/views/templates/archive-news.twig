@@ -10,7 +10,7 @@
             <div class="col-md-6">
               <time datetime="{{ posts|first.date('Y-m-d') }}">{{ posts|first.date('j F Y') }}</time>
               <h2 class="my-4">{{ posts|first.title }}</h2>
-              <span class="btn btn-primary btn-lg" href="#" role="button">Lire l'article →</span>
+              <span class="btn btn-primary btn-lg" role="button">Lire l'article →</span>
             </div>
           </div>
         </div>
@@ -26,14 +26,6 @@
             {% include 'components/news/news-teaser.twig' %}
           </div>
         {% endfor %}
-        {# <div class="col-md-12 mb-6 text-center">
-          <a href="#" class="btn btn-primary">
-            Plus de news
-            <svg class="icon icon-right icon-arrow_right">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
-            </svg>
-          </a>
-        </div> #}
       </div>
     </div>
   </div>
