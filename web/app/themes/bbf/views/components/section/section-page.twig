@@ -1,5 +1,9 @@
 <div class="row d-flex align-items-baseline">
-  <div class="col-md-6 offset-md-1 mb-4">
+  {% if page.has_sidebar %}
+    <div class="col-md-6 offset-md-1 mb-4">
+  {% else %}
+    <div class="col-md-10 offset-md-1 mb-4">
+  {% endif %}
     <h2 id="{{ section.slug }}" class="pt-4">
       {{ section.displayed_title ? section.displayed_title : section.title}}
     </h2>
