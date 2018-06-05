@@ -57,6 +57,5 @@ end
 # Uncomment the following line to run it on deploys if needed
 # after 'deploy:publishing', 'deploy:update_option_paths'
 namespace :deploy do
-  after :updated, "styleguide:build"
   after :updated, "styleguide:deploy_build"
 end
