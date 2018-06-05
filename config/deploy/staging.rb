@@ -1,14 +1,13 @@
-set :stage, :staging
+set :application, 'brassbandfribourg.minguely.ch'
 
-# Simple Role Syntax
-# ==================
-#role :app, %w{deploy@example.com}
-#role :web, %w{deploy@example.com}
-#role :db,  %w{deploy@example.com}
+set :stage, :staging
+set :branch, :dev
+
+set :deploy_to, -> { "/home/jminguely/www/#{fetch(:application)}" }
 
 # Extended Server Syntax
 # ======================
-server 'example.com', user: 'deploy', roles: %w{web app db}
+server 'ssh-jminguely.alwaysdata.net', user: 'jminguely', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -21,3 +20,11 @@ server 'example.com', user: 'deploy', roles: %w{web app db}
 #  }
 
 fetch(:default_env).merge!(wp_env: :staging)
+
+# Protect the staging with a password
+set :http_auth_users, [
+   [ "bbf", "$apr1$vHMguZuD$ZD0IeqhM0Ioypda9rIdf./" ]
+]
+after "deploy:finished", "httpauth:protect"
+
+SSHKit.config.command_map[:composer] = "php #{shared_path.join("composer.phar")}"

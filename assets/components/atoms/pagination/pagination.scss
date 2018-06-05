@@ -16,8 +16,8 @@
   }
 
   .page-item.disabled .page-link {
-    color: $white;
     background: $red;
+    color: $white;
     border-color: $red;
   }
 }
