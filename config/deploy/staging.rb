@@ -21,10 +21,4 @@ server 'ssh-jminguely.alwaysdata.net', user: 'jminguely', roles: %w{web app db}
 
 fetch(:default_env).merge!(wp_env: :staging)
 
-# Protect the staging with a password
-set :http_auth_users, [
-   [ "bbf", "$apr1$vHMguZuD$ZD0IeqhM0Ioypda9rIdf./" ]
-]
-after "deploy:finished", "httpauth:protect"
-
 SSHKit.config.command_map[:composer] = "php #{shared_path.join("composer.phar")}"
