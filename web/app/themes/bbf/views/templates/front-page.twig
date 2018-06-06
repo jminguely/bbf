@@ -63,13 +63,15 @@
                   <div class="event-cell">
                     <h4 class="half-opacity mb-5">Ensemble A</h4>
                   </div>
-                  {% for event in events.a %}
+                  {% for i in 0..1 %}
+                    {% set event = events.a[i] %}
                     {% include 'components/event/event-teaser.twig' %}
                   {% endfor %}
                   <div class="event-cell">
                     <h4 class="half-opacity mb-5">Ensemble B</h4>
                   </div>
-                  {% for event in events.b %}
+                  {% for i in 0..1 %}
+                    {% set event = events.b[i] %}
                     {% include 'components/event/event-teaser.twig' %}
                   {% endfor %}
                 </div>
