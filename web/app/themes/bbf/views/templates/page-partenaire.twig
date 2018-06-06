@@ -31,11 +31,19 @@
           {% for logo in page.get_field("logos") %}
             {% if logo.url %}
               <a href="{{ logo.url }}" class="d-flex">
-                <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
+                <img
+                  class="img-fluid m-auto"
+                  src="{{TimberImage(logo.logo).src("logo") }}"
+                  srcset="{{TimberImage(logo.logo).src("logo_2x") }} 2x"
+                >
               </a>
             {% else %}
               <span class="d-flex">
-                <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
+                <img
+                  class="img-fluid m-auto"
+                  src="{{TimberImage(logo.logo).src("logo") }}"
+                  srcset="{{TimberImage(logo.logo).src("logo_2x") }} 2x"
+                >
               </span>
             {% endif %}
 
