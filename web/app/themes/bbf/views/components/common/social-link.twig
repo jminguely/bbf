@@ -1,2 +1,13 @@
-{% include 'components/common/badge.twig' with { badge_icon: 'facebook', badge_url: 'https://www.facebook.com/bbfribourg/' } %}
-{% include 'components/common/badge.twig' with { badge_icon: 'instagram' } %}
+{% include 'components/common/badge.twig'
+  with {
+    badge_icon: 'facebook',
+    badge_url: 'https://www.facebook.com/bbfribourg/',
+    badge_style: 'primary'
+  }
+%}
+{% include 'components/common/badge.twig'
+  with {
+    badge_icon: 'instagram',
+    badge_style: 'primary'
+  }
+%}
