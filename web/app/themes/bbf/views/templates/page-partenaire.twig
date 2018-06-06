@@ -29,9 +29,16 @@
       <div class="col-md-10 offset-md-1">
         <div class="partners">
           {% for logo in page.get_field("logos") %}
-            <a href="{{ logo.url }}" class="d-flex">
-              <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
-            </a>
+            {% if logo.url %}
+              <a href="{{ logo.url }}" class="d-flex">
+                <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
+              </a>
+            {% else %}
+              <span class="d-flex">
+                <img class="img-fluid m-auto" src="{{TimberImage(logo.logo).src("logo") }}">
+              </span>
+            {% endif %}
+
           {% endfor %}
         </div>
       </div>
