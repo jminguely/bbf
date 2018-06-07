@@ -11,10 +11,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
 
+    span,
     a,
     a:visited {
-      color: inherit;
+      color: transparentize($white, 0.5);
       text-decoration: none;
+    }
+
+    a:hover {
+      color: $white;
     }
   }
 }

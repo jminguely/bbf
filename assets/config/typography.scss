@@ -19,17 +19,21 @@ h3,
 }
 
 time {
-  font-size: 0.625em;
+  font-size: 0.75em;
   letter-spacing: 0.083333333em;
   line-height: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
   font-family: $font-graphik;
   font-weight: 700;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 0.625em;
+  }
 }
 
 .half-opacity {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .main-content {

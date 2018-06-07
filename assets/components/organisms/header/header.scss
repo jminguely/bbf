@@ -9,6 +9,7 @@
 
   .top-bar {
     position: relative;
+    height: 80px;
     z-index: 10;
     background: $white;
     box-shadow: 0 0 13px 0 transparentize($black, 0.88);
@@ -21,13 +22,13 @@
 
   .toggle-navigation {
     position: relative;
-    bottom: -75px;
+    bottom: -5.2em;
     transform: translateY(-50%);
     box-shadow: 0 0 20px 0 transparentize($black, 0.85);
   }
 }
 
 .site-logo {
-  max-width: 50px;
+  max-width: 90px;
   height: auto;
 }
