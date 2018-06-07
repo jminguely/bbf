@@ -3,6 +3,7 @@ node_modules
 *.DS_Store
 .publish
 .env
+log
 
 /dist
 web/app/themes/bbf/build/
