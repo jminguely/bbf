@@ -8,9 +8,9 @@
           <img src="../images/home_cover.jpg" class="img-full pb-5">
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 offset-md-1">
-          <h2>L'historique</h2>
+      <div class="row d-flex align-items-baseline">
+        <div class="col-md-6 offset-md-1 mb-4">
+          <h2 class="pt-6 mb-5">L'historique</h2>
           <div class="half-opacity">
             <p>
               Nam pulvinar magna et bibendum eleifend. Curabitur ornare, orci at cursus dignissim, lorem nisi feugiat odio, ac egestas lorem lorem tincidunt ipsum. Praesent et mi mauris. Quisque ultricies felis at dolor fermentum vestibulum. Aenean elementum aliquet augue, ut finibus sem consequat eget. Etiam nunc velit, ullamcorper non dolor sed, auctor ultrices ante. Nunc cursus aliquet nibh, et bibendum felis euismod in. Sed mattis urna ex, ac condimentum turpis maximus et. Duis sollicitudin mi metus, elementum sodales turpis posuere at. Etiam massa nulla, semper vitae dignissim eu, tempus porta risus.</p>
@@ -29,9 +29,15 @@
             badge_style : 'primary'
           } %}
           <hr class="my-5">
-          <h4>Les évènements à venir</h4>
-          <time class="text-primary">12 décembre 2017  |  17h00</time>
-          <p class="text-small text-bold">Championnat suisse des brass bands | BBF/A</p>
+          <h4 class="mb-4">Les évènements à venir</h4>
+          <div class="mb-4">
+            <time class="text-primary">12 décembre 2017  |  17h00</time>
+            <p class="my-1 half-opacity">Championnat suisse des brass bands | BBF/A</p>
+          </div>
+          <div class="mb-4">
+            <time class="text-primary">12 décembre 2017  |  17h00</time>
+            <p class="my-1 half-opacity">Championnat suisse des brass bands | BBF/A</p>
+          </div>
         </div>
       </div>
     </div>
@@ -44,7 +50,7 @@
           <img src="../images/home_cover.jpg" class="img-full pb-5">
         </div>
         <div class="col-md-10 offset-md-1">
-          <h2>Membres ensemble A</h2>
+          <h2 class="pt-6 mb-5">Membres ensemble A</h2>
           <div class="row">
           {% for i in 0..30 %}
             <div class="col-6 col-md-4 col-lg-3">

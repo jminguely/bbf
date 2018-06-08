@@ -15,7 +15,7 @@
     {% else %}
       <div class="col-md-10 offset-md-1 mb-4">
     {% endif %}
-      <h1 id="{{ page.slug }}" class="pt-4 mb-4">{{ title }}</h1>
+      <h1 id="{{ page.slug }}" class="pt-6 mb-5">{{ title }}</h1>
       <div class="paragraph-max-width">
         {{ page.content }}
       </div>
@@ -29,7 +29,7 @@
   {% if page.logos %}
     <div class="row mt-3 mb-7">
       <div class="col-md-10 offset-md-1">
-        <div class="partners">
+        <div class="partners my-4">
           {% for logo in page.get_field("logos") %}
             {% if logo.url %}
               <a href="{{ logo.url }}" class="d-flex partner">
@@ -69,6 +69,7 @@
   </section>
 {% endif %}
 {% if page.children %}
+  <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
   <div class="container">
     {% for section in page.children %}
       {% if section.post_type == "page" %}

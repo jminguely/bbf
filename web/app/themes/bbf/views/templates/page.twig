@@ -19,7 +19,7 @@
       {% else %}
         <div class="col-md-10 offset-md-1 mb-4">
       {% endif %}
-        <h1 id="{{ page.slug }}" class="pt-4 mb-4">{{ title }}</h1>
+        <h1 id="{{ page.slug }}" class="pt-6 mb-5">{{ title }}</h1>
         {{ page.content }}
       </div>
       {% if page.has__sidebar %}
@@ -30,24 +30,27 @@
     </div>
   </div>
   {% endif %}
-  {% for section in page.children %}
-    {% if section.post_type == "page" %}
-      {% if section.thumbnail %}
-      <div class="container">
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
-            </div>
+  {% if page.children %}
+    <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+    {% for section in page.children %}
+      {% if section.post_type == "page" %}
+        {% if section.thumbnail %}
+        <div class="container">
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
+              </div>
+          </div>
         </div>
-      </div>
+        {% endif %}
+        <div class="container">
+          {% include 'components/section/section-page.twig' %}
+        </div>
+        {% if not loop.last %}
+          <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+        {% endif %}
       {% endif %}
-      <div class="container">
-        {% include 'components/section/section-page.twig' %}
-      </div>
-      {% if not loop.last %}
-        <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+    {% endfor %}
+  {% endif %}
 </div>
 {% endblock %}

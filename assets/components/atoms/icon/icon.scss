@@ -17,6 +17,11 @@ $icon-size-base: 1em;
     font-size: 1.8em;
   }
 
+  &.icon-arrow_right.icon-right {
+    top: 0.15em;
+    margin-left: 0.5em;
+  }
+
   svg {
     width: $icon-size-base;
     height: $icon-size-base;

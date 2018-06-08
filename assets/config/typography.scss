@@ -25,6 +25,11 @@ h4,
   font-weight: 400;
 }
 
+h5,
+.h5 {
+  line-height: 1.32em;
+}
+
 .lead {
   font-size: 1em;
 }
@@ -61,8 +66,8 @@ time {
   }
 }
 
-.text-bold {
-  font-weight: 700;
+.text-regular {
+  font-weight: 400;
 }
 
 @include media-breakpoint-down(sm) {

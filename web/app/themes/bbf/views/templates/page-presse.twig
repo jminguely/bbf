@@ -16,7 +16,7 @@
         {% else %}
           <div class="col-md-10 offset-md-1 mb-4">
         {% endif %}
-          <h1 id="{{ page.slug }}" class="pt-4 mb-4">{{ title }}</h1>
+          <h1 id="{{ page.slug }}" class="pt-6 mb-5">{{ title }}</h1>
           <div class="paragraph-max-width">
             {{ page.content }}
           </div>
@@ -83,19 +83,22 @@
     </div>
   </div>
   {% endif %}
-  {% for section in page.children %}
-    {% if section.post_type == "page" %}
-      {% if section.thumbnail %}
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
-            </div>
-        </div>
+  {% if page.children %}
+    <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+    {% for section in page.children %}
+      {% if section.post_type == "page" %}
+        {% if section.thumbnail %}
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
+              </div>
+          </div>
+        {% endif %}
+        {% include 'components/section/section-page.twig' %}
+        {% if not loop.last %}
+          <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+        {% endif %}
       {% endif %}
-      {% include 'components/section/section-page.twig' %}
-      {% if not loop.last %}
-        <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+    {% endfor %}
+  {% endif %}
 {% endblock %}
