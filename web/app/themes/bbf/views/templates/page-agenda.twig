@@ -1,38 +1,25 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<section class="pt-sm-9 pt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 offset-md-1">
-        <h2>{{ title }}</h2>
-        <p class="lead half-opacity">{{ page.content|striptags }}</p>
-      </div>
-    </div>
-  </div>
-</section>
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-md-7 offset-md-2 mb-8">
-        <h3 id="formation-a" class="text-primary mb-4 pt-8">Formation A</h3>
+      <div class="col-md-4 offset-md-1 mb-8">
+        <h2 id="formation-a" class="mb-6 pt-8">Formation A</h2>
         {% for event in events.a %}
           {% include 'components/event/event-item.twig' %}
-          <hr class="my-5">
+          {% if not loop.last %}
+            <hr class="my-5">
+          {% endif %}
         {% endfor %}
       </div>
-    </div>
-  </div>
-  <div class="container">
-    <img src="{{ page.thumbnail.src }}" class="img-full">
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 offset-md-2 mb-8">
-        <h3 id="formation-b" class="text-primary mb-4 pt-8">Formation B</h3>
+      <div class="col-md-4 offset-md-1 mb-8">
+        <h2 id="formation-b" class="mb-6 pt-8">Formation B</h3>
         {% for event in events.b %}
           {% include 'components/event/event-item.twig' %}
-          <hr class="my-5">
+          {% if not loop.last %}
+            <hr class="my-5">
+          {% endif %}
         {% endfor %}
       </div>
     </div>

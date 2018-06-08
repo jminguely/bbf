@@ -3,6 +3,11 @@
 .site-footer {
   background: $black;
 
+  h4,
+  .h4 {
+    font-weight: 700 !important;
+  }
+
   .disclaimer {
     background: $darkgray;
     font-size: 0.625em;

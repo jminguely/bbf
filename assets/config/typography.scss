@@ -80,3 +80,8 @@ time {
     text-decoration: underline;
   }
 }
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}

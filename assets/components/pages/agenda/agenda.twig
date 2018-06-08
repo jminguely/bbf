@@ -1,21 +1,11 @@
-{% include "organisms::header/header.twig" with { sub_navigation: true } %}
+{% include "organisms::header/header.twig" %}
 {% include "organisms::navigation/navigation.twig" %}
-<div class="site-wrapper" data-spy="scroll" data-target="#sub-navigation">
-  <section class="pt-sm-9 pt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-1">
-          <h2>L'agenda</h2>
-          <p class="lead">Si nous montons sur scène, c'est avant tout pour déclencher des émotions à notre auditoire ! Ne manquez aucune occasion de venir nous manifester votre soutien.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-7 offset-md-2 mb-8">
-          <h3 id="formation-a" class="text-primary mb-4 pt-8">Formation A</h3>
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h2 id="formation-a" class="mb-6 pt-8">Formation A</h3>
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="my-5">
           {% include "molecules::event-item/event-item.twig" %}
@@ -23,15 +13,8 @@
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="mt-5">
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <img src="../images/home_cover.jpg" class="img-full">
-    </div>
-     <div class="container">
-      <div class="row">
-        <div class="col-md-7 offset-md-2 mb-8">
-          <h3 id="formation-b" class="text-primary mb-4 pt-8">Formation B</h3>
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h2 id="formation-b" class="mb-6 pt-8">Formation B</h3>
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="my-5">
           {% include "molecules::event-item/event-item.twig" %}
