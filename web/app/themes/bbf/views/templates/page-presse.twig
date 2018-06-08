@@ -36,7 +36,11 @@
           <div class="half-opacity">
             <p>{{ article.summary }}</p>
           </div>
-          <a href="{{ article.file.url }}" class="btn btn-primary" target="_blank">
+          {% if article.type == "is_file" %}
+            <a href="{{ article.file.url }}" class="btn btn-primary" target="_blank" download>
+          {% else %}
+            <a href="{{ article.url }}" class="btn btn-primary" target="_blank">
+          {% endif %}
             Lire l'article
             <svg class="icon icon-right icon-arrow_right">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
