@@ -7,6 +7,10 @@
   font-weight: 400;
   text-decoration: none !important;
 
+  @include media-breakpoint-down(sm) {
+    font-size: 0.85em;
+  }
+
   &.btn-default {
     padding-left: 0;
     padding-right: 0;

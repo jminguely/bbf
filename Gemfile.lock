@@ -17,6 +17,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (5.0.1)
     rake (12.3.1)
+    rvm-capistrano (1.5.0)
+      capistrano (>= 2.15.4)
     sshkit (1.16.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -27,6 +29,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano (~> 3.11)
   capistrano-composer
+  rvm-capistrano
 
 BUNDLED WITH
    1.16.2

@@ -22,13 +22,21 @@
 
   .toggle-navigation {
     position: relative;
-    bottom: -5.2em;
+    bottom: -4.6em;
     transform: translateY(-50%);
     box-shadow: 0 0 20px 0 transparentize($black, 0.85);
+
+    @include media-breakpoint-down(sm) {
+      bottom: -3.8em;
+      padding: 0;
+      height: 3em;
+      width: 3em;
+      line-height: 3em;
+    }
   }
 }
 
 .site-logo {
-  max-width: 90px;
+  width: 90px;
   height: auto;
 }
