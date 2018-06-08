@@ -9,7 +9,7 @@
   .partner {
     display: block;
     padding: $grid-gutter-width $grid-gutter-width/2;
-    max-width: 200px;
+    max-width: calc(200px + $grid-gutter-width);
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 
