@@ -17,6 +17,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100vh;
   background: $red;
   z-index: $zindex-modal;
   opacity: 0;
@@ -24,10 +25,12 @@
   transition: opacity 0.3s, transform 0s 0.3s;
 
   .navigation {
-    overflow-x: hidden;
     overflow-y: scroll;
-    min-height: 100vh;
     height: 100%;
+
+    .container {
+      min-height: 750px;
+    }
   }
 
   .navigation-visible & {
@@ -39,7 +42,6 @@
   .toggle-navigation {
     font-size: 1.1em;
     color: $white;
-    padding-top: 0.5em;
 
     svg {
       margin-top: 0.75em;
