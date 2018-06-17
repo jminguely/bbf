@@ -21,13 +21,13 @@
     </div>
   </div>
   {% if page.sections %}
-    <div class="sub-navigation d-flex" id="sub-navigation" data-offset="0">
+    <div class="sub-navigation d-flex">
       <div class="container my-auto">
-        <nav>
-          <ul>
-            <li><a href="#{{ page.slug }}" data-scrollto="true">{{ title }}</a></li>
+        <nav class="nav">
+          <ul id="sub-navigation" data-offset="0">
+            <li class="nav-item"><a class="nav-link" href="#{{ page.slug }}" data-scrollto="true">{{ title }}</a></li>
             {% for section in page.children if section.post_type == "page" %}
-              <li><a href="#{{ section.slug }}" data-scrollto="true">{{ section.title }}</a></li>
+              <li class="nav-item"><a class="nav-link" href="#{{ section.slug }}" data-scrollto="true">{{ section.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>

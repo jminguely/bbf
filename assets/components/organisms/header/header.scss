@@ -28,9 +28,9 @@
 
     @include media-breakpoint-down(sm) {
       bottom: -3.8em;
-      padding: 0;
-      height: 3em;
       width: 3em;
+      height: 3em;
+      padding: 0;
       line-height: 3em;
     }
   }

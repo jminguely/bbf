@@ -4,8 +4,42 @@
   display: block;
   margin-bottom: $grid-gutter-width;
   position: relative;
+  font-size: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $grid-gutter-width;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   .overlay {
+    color: $black;
+
+    .content {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-family: $font-graphik;
+      font-size: 14px;
+      margin-top: 0.75em;
+    }
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .gallery-thumbnail .overlay {
     display: flex;
     position: absolute;
     top: 0;
@@ -19,6 +53,10 @@
     opacity: 0;
     transition: opacity 0.3s;
 
+    h4 {
+      font-family: $font-gilroy;
+    }
+
     .icon-plus {
       font-size: 3em;
     }
@@ -26,14 +64,5 @@
     .content {
       margin: auto;
     }
-  }
-
-  &:hover .overlay {
-    opacity: 1;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
   }
 }

@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-6 offset-md-1">
         <time class="half-opacity" datetime="{{ post.date('Y-m-d') }}">{{ post.date('j F Y') }}</time>
-        <h2 class="my-4">{{ title }}</h2>
+        <h2 class="mt-1 mb-4 my-md-4">{{ title }}</h2>
       </div>
     </div>
     <div class="row">
@@ -14,8 +14,8 @@
         {% if post.thumbnail %}
           <img class="img-fluid" src="{{ post.thumbnail.src("cover") }}">
         {% endif %}
-        <div class="row half-opacity pt-5 main-content">
-          <div class="col-md-11 pb-5">
+        <div class="row half-opacity pt-3 pt-md-5 main-content">
+          <div class="col-md-11 pb-3 pb-md-5">
             {{ post.content }}
           </div>
         </div>

@@ -12,17 +12,6 @@
         {% for gallery in galleries %}
           <div class="col-md-6">
             <a href="{{ gallery.link }}" class="gallery-thumbnail">
-              <div class="overlay">
-                <div class="content">
-                  <h4>{{ gallery.title }}</h4>
-                  <p class="text-small my-0">
-                    Découvrir l’album
-                    <svg class="icon icon-right icon-arrow_right">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
-                    </svg>
-                  </p>
-                </div>
-              </div>
               {% if gallery.thumbnail %}
                 {% set image = gallery.thumbnail %}
               {% else %}
@@ -34,6 +23,17 @@
                 width="{{ TimberImage(image).width("gallery-thumbnail") }}"
                 height="{{ TimberImage(image).height("gallery-thumbnail") }}"
               >
+              <div class="overlay">
+                <div class="content">
+                  <h4>{{ gallery.title }}</h4>
+                  <p class="text-small my-0 d-md-inline-block d-none">
+                    Découvrir l’album
+                    <svg class="icon icon-right icon-arrow_right">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+                    </svg>
+                  </p>
+                </div>
+              </div>
             </a>
           </div>
         {% endfor %}

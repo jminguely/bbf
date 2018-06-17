@@ -3,15 +3,24 @@
 .gallery {
   display: flex;
   flex-flow: row wrap;
+  margin-top: 1em;
   padding: $grid-gutter-width / 2;
+
+  @include media-breakpoint-down(sm) {
+    padding: $grid-gutter-width / 4;
+
+    .gallery-thumbnail {
+      margin-bottom: $grid-gutter-width / 2;
+    }
+  }
 
   .gallery-item {
     width: 50%;
     margin: 0;
     padding: 0 $grid-gutter-width / 2;
 
-    @include media-breakpoint-down(xs) {
-      width: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: 0 $grid-gutter-width / 4;
     }
 
     figcaption {

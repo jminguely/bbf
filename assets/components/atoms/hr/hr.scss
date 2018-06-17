@@ -2,4 +2,8 @@
 
 hr {
   border-top: 1px solid transparentize($black, 0.92);
+
+  &.white {
+    border-color: transparentize($white, 0.85);
+  }
 }

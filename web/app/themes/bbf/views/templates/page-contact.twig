@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="container pt-7 pb-4 mb-5">
+<div class="container pt-md-7 pb-md-4 mb-5">
   {% if page.thumbnail %}
     <div class="row">
         <div class="col-md-10 offset-md-1 pb-3">
@@ -29,7 +29,7 @@
     </div>
   {% endif %}
   {% if page.contacts %}
-  <div class="row mt-7">
+  <div class="row mt-md-7">
     <div class="col-md-10 offset-md-1">
       <div class="row">
         {% for contact in page.get_field('contacts') %}

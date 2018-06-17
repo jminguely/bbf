@@ -15,19 +15,23 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-1 mb-8">
-        <h3 id="formation-a" class="mb-6 pt-8">Formation A</h3>
+        <h3 id="formation-a" class="mb-6 pt-md-8">Formation A</h3>
         {% for event in events.a %}
           {% include 'components/event/event-item.twig' %}
-          {% if not loop.last %}
+          {% if loop.last %}
+            <hr class="my-5 d-md-none">
+          {% else %}
             <hr class="my-5">
           {% endif %}
         {% endfor %}
       </div>
       <div class="col-md-4 offset-md-1 mb-8">
-        <h3 id="formation-b" class="mb-6 pt-8">Formation B</h3>
+        <h3 id="formation-b" class="mb-6 pt-md-8">Formation B</h3>
         {% for event in events.b %}
           {% include 'components/event/event-item.twig' %}
-          {% if not loop.last %}
+          {% if loop.last %}
+            <hr class="my-5 d-md-none">
+          {% else %}
             <hr class="my-5">
           {% endif %}
         {% endfor %}

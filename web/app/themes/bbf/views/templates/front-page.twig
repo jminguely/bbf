@@ -4,10 +4,10 @@
 <section class="jumbotron jumbotron-fluid bg-inverse text-white">
   <div class="container jumbotron-content">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 text-center text-md-left my-8 my-md-0 px-5 px-md-0">
         <h2>{{ title }}</h2>
-        <p class="lead half-opacity">{{ page.content|striptags }}</p>
-        <a class="btn btn-primary btn-lg" href="/presentation" role="button">
+        <p class="lead half-opacity d-none d-md-block">{{ page.content|striptags }}</p>
+        <a class="btn btn-primary btn-lg mt-4 mt-md-0" href="/presentation" role="button">
           En savoir plus
           <svg class="icon icon-right icon-arrow_right">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
@@ -52,7 +52,7 @@
       <div class="col-md-7">
         <div class="row">
           <div class="col-md-10">
-            <h2 class="my-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg! </h2>
+            <h2 class="my-2 my-md-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg! </h2>
           </div>
         </div>
         <div class="row">
@@ -61,14 +61,14 @@
               <div class="col-12">
                 <div class="event-table my-md-4">
                   <div class="event-cell">
-                    <h3 class="mb-5">Ensemble A</h3>
+                    <h3 class="mb-5 mt-5 mt-md-0">Ensemble A</h3>
                   </div>
                   {% for i in 0..1 %}
                     {% set event = events.a[i] %}
                     {% include 'components/event/event-teaser.twig' %}
                   {% endfor %}
                   <div class="event-cell">
-                    <h3 class="mb-5">Ensemble B</h3>
+                    <h3 class="mb-5 mt-5 mt-md-0">Ensemble B</h3>
                   </div>
                   {% for i in 0..1 %}
                     {% set event = events.b[i] %}

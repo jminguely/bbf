@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <div class="container pt-7 pb-4 mb-5">
+<div class="container pt-md-7 pb-md-4 mb-md-5">
     {% if page.thumbnail %}
       <div class="row">
           <div class="col-md-10 offset-md-1 pb-3">
@@ -12,9 +12,9 @@
     {% if page.content %}
       <div class="row d-flex align-items-baseline">
         {% if page.has__sidebar %}
-          <div class="col-md-6 offset-md-1 mb-4">
+          <div class="col-md-6 offset-md-1 mb-md-4">
         {% else %}
-          <div class="col-md-10 offset-md-1 mb-4">
+          <div class="col-md-10 offset-md-1 mb-md-4">
         {% endif %}
           <h1 id="{{ page.slug }}" class="pt-6 mb-5">{{ title }}</h1>
           <div class="paragraph-max-width">
@@ -30,6 +30,7 @@
     {% endif %}
     {% if page.press %}
       {% for article in page.get_field("press") %}
+      <div class="row">
         <div class="col-md-6 offset-md-2 mt-4 mb-3">
           <time class="text-primary" datetime="{{ article.date|date('Y-m-d') }}">{{ article.date|date('j F Y') }}</time>
           <h3 class="mt-1">{{ article.title }}</h3>
@@ -48,18 +49,19 @@
           </a>
         </div>
         {% if not loop.last %}
-          <div class="col-md-7 offset-md-2 mt-5">
+          <div class="col-md-7 offset-md-2 mt-3 mt-md-5">
             <hr>
           </div>
         {% endif %}
+        </div>
       {% endfor %}
     {% endif %}
   </div>
   {% if page.downloads %}
-    <div class="container mb-7">
+    <div class="container mb-md-7">
       <div class="row">
         <div class="col-md-6 offset-md-1">
-          <h2 class="my-4">Downloads</h2>
+          <h2 class="mt-6 my-4">Downloads</h2>
           <div class="half-opacity">
             <p>Nous mettons volontiers à votre disposition les documents suivants.</p>
             <div>
@@ -78,10 +80,10 @@
     </div>
   {% endif %}
   {% if page.contact %}
-  <div class="container mb-7">
+  <div class="container mb-5 mb-md-7">
     <div class="row">
       <div class="col-md-6 offset-md-1">
-        <h2 class="my-4">Contact de presse</h2>
+        <h2 class="mt-6 my-4">Contact de presse</h2>
         {{ page.contact|wpautop }}
       </div>
     </div>

@@ -2,16 +2,16 @@
   {% for i in 1..6 %}
   <figure class="gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="../images/gallery-{{ i }}.png" itemprop="contentUrl" data-width="506" data-height="352" class="gallery-thumbnail">
+      <img data-src="../images/gallery-{{ i }}.png" alt="" width="506" height="352">
       <div class="overlay">
         <div class="content">
-          <p class="my-0">
+          <p class="my-0 d-md-inline-block d-none">
             <svg class="icon icon-plus">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
             </svg>
           </p>
         </div>
       </div>
-      <img data-src="../images/gallery-{{ i }}.png" alt="" width="506" height="352">
       <figcaption>
         <p>In esse doloremque nam.</p>
       </figcaption>

@@ -23,20 +23,20 @@
           {% for image in gallery.gallery %}
             <figure class="gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
               <a href="{{ TimberImage(image).src("large") }}" itemprop="contentUrl" data-width="{{ TimberImage(image).width("large") }}" data-height="{{ TimberImage(image).height("large") }}" class="gallery-thumbnail">
+                <img
+                  data-src="{{ TimberImage(image).src("gallery-thumbnail") }}"
+                  width="{{ TimberImage(image).width("gallery-thumbnail") }}"
+                  height="{{ TimberImage(image).height("gallery-thumbnail") }}"
+                >
                 <div class="overlay">
                   <div class="content">
-                    <p class="my-0">
+                    <p class="my-0 d-md-inline-block d-none">
                       <svg class="icon icon-plus">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use>
                       </svg>
                     </p>
                   </div>
                 </div>
-                <img
-                  data-src="{{ TimberImage(image).src("gallery-thumbnail") }}"
-                  width="{{ TimberImage(image).width("gallery-thumbnail") }}"
-                  height="{{ TimberImage(image).height("gallery-thumbnail") }}"
-                >
                 {% if image.caption %}
                   <figcaption>
                     <p>{{ image.caption }}</p>
