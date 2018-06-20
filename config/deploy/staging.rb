@@ -19,6 +19,8 @@ server 'ssh-jminguely.alwaysdata.net', user: 'jminguely', roles: %w{web app db}
 #    auth_methods: %w(password)
 #  }
 
+before "styleguide:deploy_build", "styleguide:build_local"
+
 fetch(:default_env).merge!(wp_env: :staging)
 
 SSHKit.config.command_map[:composer] = "php #{shared_path.join("composer.phar")}"
