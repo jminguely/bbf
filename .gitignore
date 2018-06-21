@@ -1,0 +1,9 @@
+node_modules
+.sass-cache
+*.DS_Store
+.publish
+.env
+log
+
+/dist
+web/app/themes/bbf/build/

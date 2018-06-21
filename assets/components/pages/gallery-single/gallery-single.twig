@@ -1,0 +1,26 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+
+<div class="site-wrapper">
+  <section class="jumbotron jumbotron-fluid bg-inverse text-white align-text-bottom dark-overlay">
+    <div class="container jumbotron-content">
+      <div class="row">
+        <div class="col-12">
+          <h2>BBF/A au CSSB 2018 - Montreux </h2>
+        </div>
+      </div>
+    </div>
+    <img class="cover-image" src="../images/gallery-header.png">
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 mb-3">
+        <div class="pt-sm-7 pb-sm-5 pt-3 pb-2">
+          {% include "organisms::gallery/gallery.twig" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}

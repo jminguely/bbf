@@ -1,0 +1,40 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper">
+  <section class="pt-sm-9 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-1">
+          <h2>L'agenda</h2>
+          <p class="lead">Si nous montons sur scène, c'est avant tout pour déclencher des émotions à notre auditoire ! Ne manquez aucune occasion de venir nous manifester votre soutien.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h3 id="formation-a" class="mb-6 pt-8">Formation A</h3>
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="my-5">
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="my-5">
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="mt-5">
+        </div>
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h3 id="formation-b" class="mb-6 pt-8">Formation B</h3>
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="my-5">
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="my-5">
+          {% include "molecules::event-item/event-item.twig" %}
+          <hr class="mt-5">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}

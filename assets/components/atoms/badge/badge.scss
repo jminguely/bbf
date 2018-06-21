@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+.badge {
+  display: inline-block;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  margin: 0 0.2em 0.2em 0;
+
+  .icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+
+    &.icon-facebook {
+      position: relative;
+      width: 0.5em;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border: 1px solid theme-color("primary");
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  &:hover {
+    .icon {
+      color: theme-color("primary");
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  &.badge-primary {
+    background: theme-color("primary");
+    color: $white;
+  }
+
+  &.badge-outline {
+    border: 1px solid $white;
+    color: $white;
+  }
+}

@@ -1,0 +1,110 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="container pt-md-7 pb-md-4 mb-md-5">
+    {% if page.thumbnail %}
+      <div class="row">
+          <div class="col-md-10 offset-md-1 pb-3">
+            <img src="{{TimberImage(page.thumbnail).src("cover") }}" class="img-full pb-3" >
+          </div>
+      </div>
+    {% endif %}
+    {% if page.content %}
+      <div class="row d-flex align-items-baseline">
+        {% if page.has__sidebar %}
+          <div class="col-md-6 offset-md-1 mb-md-4">
+        {% else %}
+          <div class="col-md-10 offset-md-1 mb-md-4">
+        {% endif %}
+          <h1 id="{{ page.slug }}" class="pt-6 mb-5">{{ title }}</h1>
+          <div class="paragraph-max-width">
+            {{ page.content }}
+          </div>
+        </div>
+        {% if page.has__sidebar %}
+          <div class="col-md-3 offset-md-1 mb-4">
+            {{ page.content_sidebar|shortcodes }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if page.press %}
+      {% for article in page.get_field("press") %}
+      <div class="row">
+        <div class="col-md-6 offset-md-2 mt-4 mb-3">
+          <time class="text-primary" datetime="{{ article.date|date('Y-m-d') }}">{{ article.date|date('j F Y') }}</time>
+          <h3 class="mt-1">{{ article.title }}</h3>
+          <div class="half-opacity">
+            <p>{{ article.summary }}</p>
+          </div>
+          {% if article.type == "is_file" %}
+            <a href="{{ article.file.url }}" class="btn btn-primary" target="_blank" download>
+          {% else %}
+            <a href="{{ article.url }}" class="btn btn-primary" target="_blank">
+          {% endif %}
+            Lire l'article
+            <svg class="icon icon-right icon-arrow_right">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+            </svg>
+          </a>
+        </div>
+        {% if not loop.last %}
+          <div class="col-md-7 offset-md-2 mt-3 mt-md-5">
+            <hr>
+          </div>
+        {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% if page.downloads %}
+    <div class="container mb-md-7">
+      <div class="row">
+        <div class="col-md-6 offset-md-1">
+          <h2 class="mt-6 my-4">Downloads</h2>
+          <div class="half-opacity">
+            <p>Nous mettons volontiers à votre disposition les documents suivants.</p>
+            <div>
+              {% for file in page.get_field("downloads") %}
+                <a href="{{ file.file.url }}" download class="btn btn-default">
+                  {{ file.title }}
+                  <svg class="icon icon-right icon-download">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-download"></use>
+                  </svg>
+                </a><br>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.contact %}
+  <div class="container mb-5 mb-md-7">
+    <div class="row">
+      <div class="col-md-6 offset-md-1">
+        <h2 class="mt-6 my-4">Contact de presse</h2>
+        {{ page.contact|wpautop }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if page.children %}
+    <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+    {% for section in page.children %}
+      {% if section.post_type == "page" %}
+        {% if section.thumbnail %}
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <img src="{{TimberImage(section.thumbnail).src("cover") }}" class="img-full pb-3" >
+              </div>
+          </div>
+        {% endif %}
+        {% include 'components/section/section-page.twig' %}
+        {% if not loop.last %}
+          <hr class="pb-sm-8 pb-5 mt-sm-6 mt-4">
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}

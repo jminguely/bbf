@@ -1,0 +1,22 @@
+<a href="{{ post.link }}" class="news-teaser d-flex flex-column h-100">
+  <figure class="thumbnail">
+    <img
+      data-src="{{ post.thumbnail.src("gallery-thumbnail") }}"
+      width="{{ post.thumbnail.width("gallery-thumbnail") }}"
+      height="{{ post.thumbnail.height("gallery-thumbnail") }}"
+    >
+  </figure>
+  <div class="content">
+    <time class="half-opacity" datetime="{{ post.date('Y-m-d') }}">{{ post.date('j F Y') }}</time>
+    <h5 class="mt-3">
+      {{ post.title }}
+    </h4>
+    <p class="half-opacity">{{ post.content|truncate(15) }}</p>
+  </div>
+  <span class="btn btn-default text-primary py-1 text-left mt-auto mb-4">
+      Lire l'article
+      <svg class="icon icon-right icon-arrow_right">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+      </svg>
+  </span>
+</a>

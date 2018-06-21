@@ -1,0 +1,11 @@
+{% if event %}
+  <div class="event-teaser mb-4">
+    <time class="text-primary">{{ event.datetime_event_date|date('j F Y') }}{% if event.datetime_heure %} | {{ event.datetime_heure|date('H:i') }}{% endif %}</time>
+    <h4 class="h3 my-3">{{ event.title }}</h4>
+    <p class="infos">{{ event.informations }}</p>
+  </div>
+  <hr class="d-md-none my-5">
+{% else %}
+  <div></div>
+{% endif %}
+

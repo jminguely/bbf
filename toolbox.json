@@ -1,0 +1,34 @@
+{
+  "src": "assets/",
+  "dest": "web/app/themes/bbf/build/",
+  "ghpages": "web/app/themes/bbf/build/",
+  "remote": "",
+  "images": [
+    "web/app/themes/bbf/build/images/**/*"
+  ],
+  "svg": [
+    "web/app/themes/bbf/build/svg/**/*"
+  ],
+  "icons": [
+    "web/app/themes/bbf/build/icons/**/*"
+  ],
+  "iconsFontName": "icon",
+  "fonts": [
+    "web/app/themes/bbf/build/fonts/**/*"
+  ],
+  "vendors": {
+    "css": [
+      "node_modules/photoswipe/dist/photoswipe.css"
+    ],
+    "js": [
+      "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "node_modules/photoswipe/dist/photoswipe.js",
+      "node_modules/photoswipe/dist/photoswipe-ui-default.js",
+      "node_modules/vanilla-lazyload/dist/lazyload.min.js"
+    ]
+  },
+  "singles": [{
+    "src": "",
+    "dest": ""
+  }]
+}

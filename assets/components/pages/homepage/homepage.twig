@@ -1,0 +1,67 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper">
+  {% include "organisms::jumbotron/jumbotron.twig" %}
+  <section class="bg-lightgray">
+    <div class="container py-7">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Les dernières news</h3>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <a href="#" class="btn btn-primary">
+            Toutes les news
+            <svg class="icon icon-right icon-arrow_right">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="row pt-5 d-flex flex-row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          {% include "molecules::news-teaser-card/news-teaser-card.twig" %}
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          {% include
+          "molecules::news-teaser-card/news-teaser-card.twig" with { teaser_title : 'Préparation au CSSB 2017' } %}
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          {% include "molecules::news-teaser-card/news-teaser-card.twig" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container py-7">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-10">
+              <h2 class="my-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-2">
+              {% include "organisms::event-table/event-table.twig" %}
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" class="btn btn-primary">
+                    Tous les évènements
+                    <svg class="icon icon-right icon-arrow_right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 d-none d-md-block">
+          <img src="../images/agenda_figure.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}

@@ -1,0 +1,30 @@
+{% include "organisms::header/header.twig" %}
+{% include "organisms::navigation/navigation.twig" %}
+<div class="site-wrapper pt-sm-9 pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-1">
+        <h2 class="my-4">Merci à nos précieux partenaires pour leur soutien.</h2>
+        <div class="half-opacity">
+          <p>Depuis plusieurs années, nous pouvons compter sur le soutien financier ou matériel des entreprises ci-dessous. Tous nos remerciements les plus sincères!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mb-7">
+      <div class="col-md-10 offset-md-1">
+        {% include "organisms::partners/partners.twig" %}
+      </div>
+    </div>
+  </div>
+  <section class="bg-primary text-white py-7">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-1">
+          <p class="h1">Si vous aussi vous voulez nous soutenir, vous trouverez toutes les informations en cliquant sur ce <a href="#lien">lien</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% include "organisms::footer/footer.twig" %}
+{{ source('../icons/icons.svg') }}

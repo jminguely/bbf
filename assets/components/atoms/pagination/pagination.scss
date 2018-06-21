@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+.pagination {
+  border-radius: 1.5em;
+
+  .page-item:first-child .page-link {
+    border-top-left-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+    padding-left: 1em;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    padding-right: 1em;
+  }
+
+  .page-item.disabled .page-link {
+    background: $red;
+    color: $white;
+    border-color: $red;
+  }
+}

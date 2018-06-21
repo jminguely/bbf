@@ -1,0 +1,93 @@
+body {
+  font-family: $font-graphik;
+  font-size: 16px;
+}
+
+h1, h2, h4, h5, h6,
+.h1, .h2, .h4, .h5, .h6 {
+  font-family: $font-gilroy;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  line-height: 1.22em;
+}
+
+h3,
+.h3 {
+  font-family: $font-gilroy;
+  font-weight: 400;
+}
+
+h4,
+.h4 {
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+h5,
+.h5 {
+  line-height: 1.32em;
+}
+
+.lead {
+  font-size: 1em;
+}
+
+time {
+  font-size: 0.75em;
+  letter-spacing: 0.083333333em;
+  line-height: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-graphik;
+  font-weight: 700;
+}
+
+.half-opacity {
+  opacity: 0.6;
+}
+
+.main-content {
+  .blockquote {
+    margin: 3em 0;
+  }
+
+  p {
+      margin-bottom: 2em;
+  }
+}
+
+.text-small {
+  font-size: 0.75em;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1em;
+  }
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+@include media-breakpoint-down(sm) {
+  h1, .h1 { font-size: $h1-font-size * 0.75; }
+  h2, .h2 { font-size: $h2-font-size * 0.53; }
+  h3, .h3 { font-size: $h3-font-size * 0.75; }
+  h4, .h4 { font-size: $h4-font-size; }
+  h5, .h5 { font-size: $h5-font-size; }
+  h6, .h6 { font-size: $h6-font-size * 0.75; }
+}
+
+.text-white {
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}

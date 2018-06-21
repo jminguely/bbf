@@ -1,0 +1,10 @@
+{% if events %}
+  <div class="mt-4">
+    {% for event in events %}
+      <div class="mb-4">
+        <time class="text-primary">{{ event.datetime_event_date|date('j F Y') }}{% if event.datetime_heure %}  |  {{ event.datetime_heure|date('H:i') }}{% endif %}</time>
+        <p class="my-1 half-opacity">{{ event.title }} | BBF/{{ event.formation|capitalize }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

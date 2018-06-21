@@ -1,0 +1,37 @@
+<header class="site-header">
+  <div class="top-bar pt-3 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>
+            <a href="{{site.link}}">
+              <img class="site-logo" src="{{ theme.link }}/build/svg/logo_bbf.svg" alt="BBF - Brass Band Fribourg">
+            </a>
+          </h1>
+        </div>
+        <div class="col-6 text-right">
+          <a href="#" class="toggle-navigation btn btn-primary">
+            <span class="d-none d-md-inline-block">Menu</span>
+            <svg class="icon ml-md-3">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if page.sections %}
+    <div class="sub-navigation d-flex">
+      <div class="container my-auto">
+        <nav class="nav">
+          <ul id="sub-navigation" data-offset="0">
+            <li class="nav-item"><a class="nav-link" href="#{{ page.slug }}" data-scrollto="true">{{ title }}</a></li>
+            {% for section in page.children if section.post_type == "page" %}
+              <li class="nav-item"><a class="nav-link" href="#{{ section.slug }}" data-scrollto="true">{{ section.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  {% endif %}
+</header>

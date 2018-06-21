@@ -1,0 +1,15 @@
+html {
+  background: $darkgray;
+}
+
+.site-wrapper {
+  min-height: calc(100vh - 370px);
+}
+
+.bg-lightgray {
+  background: $lightgray;
+}
+
+.paragraph-max-width {
+  max-width: 600px;
+}

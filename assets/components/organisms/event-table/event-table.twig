@@ -1,0 +1,33 @@
+<div class="event-table my-md-4">
+  <div class="event-cell">
+    <h3 class="mb-5">Ensemble A</h3>
+  </div>
+  <div class="event-cell">
+    {% include "molecules::event-teaser/event-teaser.twig" %}
+  </div>
+  <div class="event-cell">
+    {% include "molecules::event-teaser/event-teaser.twig" with {
+        event_title : 'Championnat suisse des brass bands à Montreux',
+        event_infos : 'Auditorium Stravinsky, Montreux - heure à définir'
+      }
+    %}
+  </div>
+
+  <div class="event-cell">
+    <h3 class="mb-5">Ensemble B</h3>
+  </div>
+  <div class="event-cell">
+    {% include "molecules::event-teaser/event-teaser.twig" with {
+        event_title : 'Concert HEMU',
+        event_infos : 'Bicubic, Romont - 20h00'
+      }
+    %}
+  </div>
+  <div class="event-cell">
+    {% include "molecules::event-teaser/event-teaser.twig" with {
+        event_title : 'Concert de Gala',
+        event_infos : 'Place de fête, Attalens, Suisse - 20h00'
+      }
+    %}
+  </div>
+</div>
