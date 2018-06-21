@@ -17,7 +17,5 @@ export default () => {
       const target = $(e.currentTarget).attr('href');
       scrollToHash(target, 500);
     });
-
-    $('body').scrollspy({ target: '#sub-navigation' });
   })(jQuery);
 };

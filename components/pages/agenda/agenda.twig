@@ -1,6 +1,6 @@
-{% include "organisms::header/header.twig" with { sub_navigation: true } %}
+{% include "organisms::header/header.twig" %}
 {% include "organisms::navigation/navigation.twig" %}
-<div class="site-wrapper" data-spy="scroll" data-target="#sub-navigation">
+<div class="site-wrapper">
   <section class="pt-sm-9 pt-5">
     <div class="container">
       <div class="row">
@@ -14,8 +14,8 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-7 offset-md-2 mb-8">
-          <h3 id="formation-a" class="text-primary mb-4 pt-8">Formation A</h3>
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h3 id="formation-a" class="mb-6 pt-8">Formation A</h3>
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="my-5">
           {% include "molecules::event-item/event-item.twig" %}
@@ -23,13 +23,8 @@
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="mt-5">
         </div>
-      </div>
-    </div>
-    <img src="../images/home_cover.jpg" class="img-full">
-     <div class="container">
-      <div class="row">
-        <div class="col-md-7 offset-md-2 mb-8">
-          <h3 id="formation-b" class="text-primary mb-4 pt-8">Formation B</h3>
+        <div class="col-md-4 offset-md-1 mb-8">
+          <h3 id="formation-b" class="mb-6 pt-8">Formation B</h3>
           {% include "molecules::event-item/event-item.twig" %}
           <hr class="my-5">
           {% include "molecules::event-item/event-item.twig" %}

@@ -1,9 +1,9 @@
-<footer class="site-footer text-white pt-6">
-  <div class="container">
+<footer class="site-footer text-white">
+  <div class="container py-6">
     <div class="row">
-      <div class="col-md-4 pr-lg-8 mb-6">
-        <h4>Besoin d'une info ?</h4>
-        <p class="half-opacity">Vous souhaitez nous rejoindre ou nous voir participer à l'un de vos événements ?</p>
+      <div class="col-md-4 pr-lg-8 py-4">
+        <h4 class="font-smoothing">Besoin d'une info ?</h4>
+        <p class="half-opacity mt-3 mb-4">Vous souhaitez nous rejoindre ou nous voir participer à l'un de vos événements ?</p>
         <a href="#" class="btn btn-primary">
           Nous contacter
           <svg class="icon icon-right icon-arrow_right">
@@ -11,9 +11,9 @@
           </svg>
         </a>
       </div>
-      <div class="col-md-4 pr-lg-8 mb-6">
-        <h4>Nous soutenir</h4>
-        <p class="half-opacity">Vous êtes un particulier ou une entreprise et vous désirez nous manifester votre soutien ?</p>
+      <div class="col-md-4 pr-lg-8 py-4">
+        <h4 class="font-smoothing">Nous soutenir</h4>
+        <p class="half-opacity mt-3 mb-4">Vous êtes un particulier ou une entreprise et vous désirez nous manifester votre soutien ?</p>
           <a href="#" class="btn btn-primary">
               Nous soutenir
               <svg class="icon icon-right icon-arrow_right">
@@ -21,9 +21,9 @@
               </svg>
           </a>
       </div>
-      <div class="col-md-4 pr-lg-8 mb-6">
-        <h4>Nous suivre</h4>
-        <p class="half-opacity">Suivez en direct l'actualité du Brass Band Fribourg au travers des réseaux sociaux.</p>
+      <div class="col-md-4 pr-lg-8 py-4">
+        <h4 class="font-smoothing">Nous suivre</h4>
+        <p class="half-opacity mt-3 mb-4">Suivez en direct l'actualité du Brass Band Fribourg au travers des réseaux sociaux.</p>
         {% include "atoms::badge/badge.twig" with {
             badge_icon : 'facebook',
             badge_style : 'primary'
@@ -39,17 +39,17 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-lg-8">
-          All Rights Reserved © 2018
+          <span>All Rights Reserved © 2018</span>
           <span class="mx-1">|</span>
           <a href="#">Terms & Conditions</a>
           <span class="mx-1">|</span>
           <a href="#">Privacy Policy</a>
         </div>
         <div class="col-sm-6 text-left text-sm-right text-lg-left col-lg-4">
-          Designed by
+          <span>Designed by</span>
           <a href="">Nadine Schneuwly</a>
           <span class="mx-1">|</span>
-          Dev by <a href="#">Julien Minguely</a>
+          <span>Dev by </span><a href="#">Julien Minguely</a>
         </div>
       </div>
     </div>
