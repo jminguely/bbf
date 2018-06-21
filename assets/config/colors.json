@@ -1,4 +1,7 @@
 {
-  "Black": "#000",
-  "White": "#fff"
+  "Black": "#131313",
+  "White": "#ffffff",
+  "Red": "#ca0000",
+  "Lightgray": "#ededed",
+  "Darkgray": "#393939"
 }
