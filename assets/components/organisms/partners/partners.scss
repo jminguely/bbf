@@ -15,6 +15,7 @@
 
     @include media-breakpoint-down(sm) {
       width: 45%;
+      filter: grayscale(0%);
     }
 
     &:hover {

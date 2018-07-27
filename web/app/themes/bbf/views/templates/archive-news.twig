@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
+  <div class="row d-none d-sm-block">
     <div class="col-md-12 mt-7 mb-4">
       <a href="{{ posts|first.link }}" class="jumbotron jumbotron-fluid dark-gradient-overlay d-block bg-inverse text-white align-text-bottom">
         <div class="container jumbotron-content px-5">
@@ -21,14 +21,15 @@
   <div class="row">
     <div class="col-12">
       <div class="row news-flow">
-        {% for post in posts|slice(1) %}
-          <div class="col-sm-6 col-md-4 mb-md-4 mt-3">
-            {% include 'components/news/news-teaser.twig' %}
-
-          </div>
-          <div class="col-12 d-md-none">
-            <hr class="mb-4">
-          </div>
+        {% for post in posts %}
+          {% if loop.first %}<div class="d-block d-sm-none mt-7">{% endif %}
+            <div class="col-sm-6 col-md-4 mb-md-4 mt-3">
+              {% include 'components/news/news-teaser.twig' %}
+            </div>
+            <div class="col-12 d-sm-none">
+              <hr class="mb-4">
+            </div>
+          {% if loop.first %}</div>{% endif %}
         {% endfor %}
       </div>
     </div>
