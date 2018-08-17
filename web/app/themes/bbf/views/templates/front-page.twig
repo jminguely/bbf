@@ -23,7 +23,7 @@
   {% endif %}
 </section>
 <section class="bg-lightgray">
-  <div class="container py-7">
+  <div class="container py-8">
     <div class="row">
       <div class="col-md-12">
         <h2>Les dernières news</h3>
@@ -47,33 +47,29 @@
   </div>
 </section>
 <section>
-  <div class="container py-7">
+  <div class="container py-8">
     <div class="row">
       <div class="col-md-7">
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-11">
             <h2 class="my-2 my-md-5">Ne manquez pas les prochaines prestations du Brass Band Fribourg! </h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-10 offset-md-2">
+          <div class="col-md-11">
             <div class="row mb-3">
               <div class="col-12">
                 <div class="event-table my-md-4">
                   <div class="event-cell">
                     <h3 class="mb-5 mt-5 mt-md-0">Ensemble A</h3>
                   </div>
-                  {% for i in 0..1 %}
-                    {% set event = events.a[i] %}
-                    {% include 'components/event/event-teaser.twig' %}
-                  {% endfor %}
+                  {% include 'components/event/event-teaser.twig' with { event: events.a[0] } %}
+                  {% include 'components/event/event-teaser.twig' with { event: events.a[1], event_class: "d-none d-lg-block" } %}
                   <div class="event-cell">
                     <h3 class="mb-5 mt-5 mt-md-0">Ensemble B</h3>
                   </div>
-                  {% for i in 0..1 %}
-                    {% set event = events.b[i] %}
-                    {% include 'components/event/event-teaser.twig' %}
-                  {% endfor %}
+                  {% include 'components/event/event-teaser.twig' with { event: events.b[0] } %}
+                  {% include 'components/event/event-teaser.twig' with { event: events.b[1], event_class: "d-none d-lg-block" } %}
                 </div>
               </div>
               </div>

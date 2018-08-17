@@ -1,9 +1,9 @@
 <div class="row d-flex align-items-baseline">
 
   {% if section.has__sidebar %}
-    <div class="col-md-6 offset-md-1 mb-4">
+    <div class="col-md-6 offset-md-1 mb-4 mb-md-8">
   {% else %}
-    <div class="col-md-10 offset-md-1 mb-4">
+    <div class="col-md-10 offset-md-1 mb-4 mb-md-8">
   {% endif %}
     <h2 id="{{ section.slug }}" class="pt-6 mb-5">
       {{ section.displayed_title ? section.displayed_title : section.title}}
