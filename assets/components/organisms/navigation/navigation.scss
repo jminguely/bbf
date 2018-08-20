@@ -50,6 +50,11 @@
 }
 
 .site-navigation {
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 3em;
+  }
+  
   ul {
     list-style: none;
     padding: 0;
@@ -67,10 +72,10 @@
     text-decoration: none;
 
     @include media-breakpoint-down(sm) {
-      font-size: 1.375em;
-      line-height: 1.54;
+      font-size: 1.8em;
+      line-height: 1.2;
       font-weight: 500;
-      margin-bottom: 0.15em;
+      margin-bottom: 0.3em;
     }
   }
 

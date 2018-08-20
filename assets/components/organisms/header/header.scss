@@ -22,16 +22,19 @@
 
   .toggle-navigation {
     position: relative;
-    bottom: -4.6em;
+    bottom: -3em;
+    font-size: 1.1em;
     transform: translateY(-50%);
     box-shadow: 0 0 20px 0 transparentize($black, 0.85);
 
     @include media-breakpoint-down(sm) {
-      bottom: -3.8em;
-      width: 3em;
-      height: 3em;
+      bottom: -2.3em;
+      width: 2.5em;
+      height: 2.5em;
       padding: 0;
-      line-height: 3em;
+      font-size: 1.5em;
+      line-height: 2.5em;
+
     }
   }
 }

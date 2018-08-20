@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-10 offset-md-1 mb-5">
+    <div class="col-md-10 offset-md-1 mb-4 mb-md-8">
       <div class="pt-sm-9 pb-sm-7 pt-5 pb-4">
         <h1>Notre galerie photo</h1>
         <p class="half-opacity">Revivez nos plus beaux moments, nos plus belles émotions !</p>
@@ -40,33 +40,35 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12 text-center pb-7 text-center">
-      <nav class="d-inline-block">
-        <ul class="pagination">
-          {% if pagination.prev %}
-            <li class="page-item {{pagination.prev.link|length ? '' : 'disabled'}}"><a class="page-link" href="{{pagination.prev.link}}">Précédent</a></li>
-          {% endif %}
-          {% for page in pagination.pages %}
-            {% if page.link %}
-              <li class="page-item">
-                <a class="page-link" href="{{page.link}}">
-                {{page.title}}
-                </a>
-              </li>
-            {% else %}
-              <li class="page-item disabled">
-                <span class="page-link" tabindex="-1">{{page.title}}</a>
-              </li>
+  {% if pagination.prev or pagination.next or pagination.pa %}
+    <div class="row">
+      <div class="col-12 text-center pb-7 text-center">
+        <nav class="d-inline-block">
+          <ul class="pagination">
+            {% if pagination.prev %}
+              <li class="page-item {{pagination.prev.link|length ? '' : 'disabled'}}"><a class="page-link" href="{{pagination.prev.link}}">Précédent</a></li>
             {% endif %}
-          {% endfor %}
-          {% if pagination.next %}
-            <li class="page-item {{pagination.next.link|length ? '' : 'disabled'}}"><a class="page-link" href="{{pagination.next.link}}">Suivant</a></li>
-          {% endif %}
-        </ul>
-      </nav>
+            {% for page in pagination.pages %}
+              {% if page.link %}
+                <li class="page-item">
+                  <a class="page-link" href="{{page.link}}">
+                  {{page.title}}
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link" tabindex="-1">{{page.title}}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            {% if pagination.next %}
+              <li class="page-item {{pagination.next.link|length ? '' : 'disabled'}}"><a class="page-link" href="{{pagination.next.link}}">Suivant</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
+  {% endif %}
 </div>
 {% endblock %}
 

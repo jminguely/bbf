@@ -10,6 +10,12 @@ html {
   background: $lightgray;
 }
 
+.bg-md-lightgray {
+  @include media-breakpoint-up(md) {
+    background: $lightgray;
+  }
+}
+
 .paragraph-max-width {
   max-width: 600px;
 }
