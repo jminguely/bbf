@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="container pt-md-7 mb-4 mb-md-8">
+<div class="container pt-md-7 mb-2 mb-md-6">
   {% if page.thumbnail %}
     <div class="row">
         <div class="col-md-10 offset-md-1 pb-3">
@@ -33,7 +33,7 @@
     <div class="col-md-10 offset-md-1">
       <div class="row">
         {% for contact in page.get_field('contacts') %}
-          <div class="col-lg-3 col-sm-6 mb-3 d-flex flex-column">
+          <div class="col-sm-6 mb-5 d-flex flex-column">
             <h4>{{ contact.title }}</h4>
             <div class="mt-auto">
               {{ contact.content }}

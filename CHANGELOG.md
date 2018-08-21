@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.1 (2018-8-21)
+
+  - Last layout / design polish
+
 ## 1.0.0 (2018-8-20)
 
   - First release
