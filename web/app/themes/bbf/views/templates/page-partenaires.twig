@@ -32,7 +32,7 @@
         <div class="partners my-4">
           {% for logo in page.get_field("logos") %}
             {% if logo.url %}
-              <a href="{{ logo.url }}" class="d-flex partner">
+              <a href="{{ logo.url }}" class="artner">
                 <img
                   class="img-fluid m-auto"
                   src="{{TimberImage(logo.logo).src("logo") }}"
@@ -40,7 +40,7 @@
                 >
               </a>
             {% else %}
-              <span class="d-flex partner">
+              <span class="partner">
                 <img
                   class="img-fluid m-auto"
                   src="{{TimberImage(logo.logo).src("logo") }}"
