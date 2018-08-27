@@ -21,9 +21,10 @@
       <div class="pt-sm-7 pb-sm-5 pt-3 pb-2">
         <div class="gallery">
           {% for image in gallery.gallery %}
-            <figure class="gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <a href="{{ TimberImage(image).src("large") }}" itemprop="contentUrl" data-width="{{ TimberImage(image).width("large") }}" data-height="{{ TimberImage(image).height("large") }}" class="gallery-thumbnail">
+            <figure data-index="{{ loop.index }}" class="gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a data-index="{{ loop.index }}" href="{{ TimberImage(image).src("large") }}" itemprop="contentUrl" data-width="{{ TimberImage(image).width("large") }}" data-height="{{ TimberImage(image).height("large") }}" class="gallery-thumbnail">
                 <img
+                data-index="{{ loop.index }}"
                   data-src="{{ TimberImage(image).src("gallery-thumbnail") }}"
                   width="{{ TimberImage(image).width("gallery-thumbnail") }}"
                   height="{{ TimberImage(image).height("gallery-thumbnail") }}"

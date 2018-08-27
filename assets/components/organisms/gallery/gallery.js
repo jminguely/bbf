@@ -22,15 +22,15 @@ export default () => {
       container.push(item);
     });
 
-    $targets.click((i, element) => {
+    $targets.click((i) => {
+      const element = $(i.currentTarget);
       event.preventDefault();
 
       const $pswp = $('#pswp')[0];
       const options = {
         index: parseInt($(element).attr('data-index'), 10),
         bgOpacity: 0.85,
-        showHideOpacity: true,
-        history: false,
+        showHideOpacity: true
       };
 
       // Initialize PhotoSwipe
