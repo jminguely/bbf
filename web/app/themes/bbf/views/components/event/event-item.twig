@@ -1,5 +1,11 @@
 <div class="event-item mb-4">
-  <time class="text-primary">{{ event.datetime_event_date|date('j F Y') }}{% if event.datetime_heure %} | {{ event.datetime_heure|date('H:i') }}{% endif %}</time>
+  <time class="text-primary">
+    {% if event.datetime_date_alternatif %}
+      {{ event.datetime_date_alternatif }}
+    {% else %}
+      {{ event.datetime_event_date|date('j F Y') }}{% if event.datetime_heure %} | {{ event.datetime_heure|date('H:i') }}{% endif %}
+    {% endif %}
+  </time>
   <h4 class="h3 my-2">{{ event.title }}</h4>
   <p class="my-0 py-0">{{ event.informations }}</p>
   {% if event.details %}

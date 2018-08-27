@@ -52,6 +52,26 @@
                     },
                     "display_format": "H:i",
                     "return_format": "H:i"
+                },
+                {
+                    "key": "field_5b84286a8f288",
+                    "label": "Texte alternatif",
+                    "name": "date_alternatif",
+                    "type": "text",
+                    "value": null,
+                    "instructions": "Si spécifié, ce champ sera utilisé pour l'affichage de la date.\r\n\r\nIl peut être utilisé pour affiché une plage de date: (ex: 22-24 SEPTEMBRE 2018 | 09:00)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -138,5 +158,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526389329
+    "modified": 1535387870
 }
