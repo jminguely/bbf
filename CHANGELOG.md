@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.2 (2018-9-17)
+
+  - IE Fixes
+
 ## 1.0.1 (2018-8-21)
 
   - Last layout / design polish

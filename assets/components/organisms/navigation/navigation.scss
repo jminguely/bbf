@@ -12,6 +12,7 @@
 }
 
 .navigation-wrapper {
+  pointer-events: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -34,6 +35,7 @@
   }
 
   .navigation-visible & {
+    pointer-events: auto;
     opacity: 1;
     transform: translateX(0);
     transition: opacity 0.3s, transform 0s 0s;
