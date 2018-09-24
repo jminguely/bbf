@@ -21,21 +21,21 @@
   }
 
   .toggle-navigation {
-    position: relative;
-    bottom: -3em;
-    font-size: 1.1em;
-    transform: translateY(-50%);
-    box-shadow: 0 0 20px 0 transparentize($black, 0.85);
+    // position: relative;
+    // bottom: -3em;
+    // font-size: 1.1em;
+    // transform: translateY(-50%);
+    // box-shadow: 0 0 20px 0 transparentize($black, 0.85);
 
-    @include media-breakpoint-down(sm) {
-      bottom: -2.3em;
-      width: 2.5em;
-      height: 2.5em;
-      padding: 0;
-      font-size: 1.5em;
-      line-height: 2.5em;
+    // @include media-breakpoint-down(sm) {
+    //   bottom: -2.3em;
+    //   width: 2.5em;
+    //   height: 2.5em;
+    //   padding: 0;
+    //   font-size: 1.5em;
+    //   line-height: 2.5em;
 
-    }
+    // }
   }
 }
 
