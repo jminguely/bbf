@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.3 (2019-1-10)
+
+  - Invert the blog article display to desc.
+
 ## 1.0.2 (2018-9-17)
 
   - IE Fixes
